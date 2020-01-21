@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Maria Angelova](https://up.htmlacademy.ru/htmlcss/27/user/196520).
-* Наставник: Владислав Ермолаев.
+* Наставник: [Владислав Ермолаев](https://htmlacademy.ru/profile/id128353).
 
 ---
 
