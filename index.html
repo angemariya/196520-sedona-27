@@ -7,7 +7,7 @@
   <body>
     <header>
       <div class="container">
-        <img src="img/logo" alt="Седона логотип" width="140" height="72">
+        <img src="img/logo.png" alt="Седона логотип" width="140" height="72">
         <nav>
           <ul>
             <li><a href="#">Информация</a></li>
@@ -20,16 +20,19 @@
     </header>
 
     <main>
-      <div class="container">
-        <section class="promo"> <!--Background photo-->
-          <img src="#" alt="Welcome" width="459" height="353">
+      <section class="promo"> <!--Background photo-->
+        <div class="container">
+          <img src="img/welcome.svg" alt="Welcome" width="459" height="353">
           <div class="promo_text">
             <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
             <p class="promo_description">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="reasons">
+      <section class="reasons">
+
+        <div class="container">
           <div class="blue-back">
             <h2>Настоящий
               городок</h2>
@@ -39,22 +42,21 @@
           <div class="feature-picture"> 
             <!--Здесь фото справа-->
           </div>
-        
-
+          
           <div class="white-back">
             <ul>
               <li>
-                <img src="#" alt="Жильё" width="75" height="72">
+                <img src="img/icons/icon-1.svg" alt="Жильё" width="75" height="72">
                 <h2>Жильё</h2>
                 <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
               </li>
               <li>
-                <img src="#" alt="Еда" width="74" height="70">
+                <img src="img/icons/icon-2.svg" alt="Еда" width="74" height="70">
                 <h2>Еда</h2>
                 <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
               </li>
               <li>
-                <img src="#" alt="Сувениры" width="64" height="76">
+                <img src="img/icons/icon-3.svg" alt="Сувениры" width="64" height="76">
                 <h2>Сувениры</h2>
                 <p>Не только китайского, но и местного производства!</p>
               </li>
@@ -68,7 +70,7 @@
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           </div>
         
-
+  
           <div class="gray-back">
             <div>
               <h2>Небольшая площадь</h2>
@@ -86,37 +88,34 @@
               <p>Большинство едет в гранд каньон и толпится там</p>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="hotels">
-            <p class="hotels_question">Заинтересовались?</p>
-            <p class="hotels_description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-            <!--Тут будет форма-->
-        </section>
-
-
-
-        <section class="map"> <!--Карта-->
-
-        </section>
-      </div>
+      <section class="hotels">
+        <div class="container">
+          <p class="hotels_question">Заинтересовались?</p>
+          <p class="hotels_description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+          <!--Тут будет форма-->
+          <div class="map"> <!--Карта--></div>
+        </div>
+      </section>
     </main>
 
     <footer>
       <div class="container">
         <a href="#" class="footer_hashtag">#Visitsedona</a>
+        <a href="tel:+74956660266" class="footer_phone">Тел: +7(495) 666-02-66</a>
+
         <div class="social">
           <a href="#"></a> <!--twitter-->
           <a href="#"></a> <!--facebook-->
           <a href="#"></a> <!--youtube-->
         </div>
-        <div class="footer_info">
-          
-          <a class="footer_logo" href="https://htmlacademy.ru/intensive/htmlcss">
-            <span>Website by</span>
-            <img src="#" alt="html-logo" width="115" height="41">
-          </a>
-        </div>
+
+        <a class="footer_logo" href="https://htmlacademy.ru/intensive/htmlcss">
+          Website by
+          <img src="img/logo-html.svg" alt="html-logo" width="115" height="41">
+        </a>
       </div>
     </footer>
   </body>
