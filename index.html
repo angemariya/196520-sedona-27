@@ -7,7 +7,7 @@
   <body>
     <header>
       <div class="container">
-        <img src="img/logo.png" alt="Седона логотип" width="140" height="72">
+        <img src="img/logo.png" alt="Логотип города Седона" width="140" height="72">
         <nav class="navigation">
           <ul>
             <li><a href="#">Информация</a></li>
@@ -22,7 +22,8 @@
     <main>
       <section class="promo"> <!--Background photo-->
         <div class="container">
-          <img src="img/welcome.svg" alt="Welcome" width="459" height="353">
+          <h1 class="visually-hidden">Добро пожаловать в великолепную Седону</h1>
+          <img src="img/welcome.svg" alt="" width="459" height="353">
           <div class="promo_text">
             <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
             <p class="promo_description">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
@@ -90,10 +91,33 @@
 
       <section class="booking">
         <div class="container">
-          <p class="booking_heading">Заинтересовались?</p>
-          <p class="booking_description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-          <!--Тут будет форма-->
-          <div class="map"> <!--Карта--></div>
+          <p class="booking__heading">Заинтересовались?</p>
+          <p class="booking__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+          
+          <form method="get" action="https://echo.htmlacademy.ru">
+            <h3 class="form_heading">поиск гостиницы в седоне</div>
+            <div class="form_line">
+              <label for="day_in">дата заезда</label>
+              <input type="text" id="day_in" placeholder="24 апреля 2017">
+              <div class="calender"></div>
+            </div>
+            <div class="form_line">
+              <label for="day_out">дата выезда</label>
+              <input type="text" id="day_out" placeholder="4 июля 2017">
+              <div class="calender"></div>
+            </div>
+            <div class="form_line_divided">
+              <label for="adult">Взрослые</label>
+              <input type="text" id="adult" placeholder="2"> <!--Здесь будут минус и плюс как псевдоэлементы-->
+            </div>
+            <div class="form_line_divided">
+              <label for="kids">Дети</label>
+              <input type="text" id="kids" placeholder="0"> <!--Здесь будут минус и плюс как псевдоэлементы-->
+            </div>
+            <button type="button">Найти</button>
+          </form>
+
+          <div class="map" aria-label="Местоположение Седоны на карте"> <!--Карта--></div>
         </div>
       </section>
     </main>
@@ -106,14 +130,14 @@
         </div>
 
         <div class="social">
-          <a href="#"></a> <!--twitter-->
-          <a href="#"></a> <!--facebook-->
-          <a href="#"></a> <!--youtube-->
+          <a href="#" aria-label="Мы в Твиттере"></a> <!--twitter-->
+          <a href="#" aria-label="Мы в Фейсбуке"></a> <!--facebook-->
+          <a href="#" aria-label="Мы в Ютубе"></a> <!--youtube-->
         </div>
 
         <a class="footer_logo" href="https://htmlacademy.ru/intensive/htmlcss">
           Website by
-          <img src="img/logo-html.svg" alt="html-logo" width="115" height="41">
+          <img src="img/logo-html.svg" alt="HTML Academy" width="115" height="41">
         </a>
       </div>
     </footer>
