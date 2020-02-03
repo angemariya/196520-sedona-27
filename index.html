@@ -93,29 +93,30 @@
         <div class="container">
           <p class="booking__heading">Заинтересовались?</p>
           <p class="booking__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-          
+          <a class="form_trigger" href="#">Поиск гостиницы в седоне</a>
+
           <form method="get" action="https://echo.htmlacademy.ru">
-            <h3 class="form_heading">поиск гостиницы в седоне</div>
-            <div class="form_line">
+            <div class="form_group">
               <label for="day_in">дата заезда</label>
               <input type="text" id="day_in" placeholder="24 апреля 2017">
-              <div class="calender"></div>
             </div>
-            <div class="form_line">
+            <div class="form_group">
               <label for="day_out">дата выезда</label>
               <input type="text" id="day_out" placeholder="4 июля 2017">
-              <div class="calender"></div>
             </div>
-            <div class="form_line_divided">
+            <div class="form_group">
               <label for="adult">Взрослые</label>
-              <input type="text" id="adult" placeholder="2"> <!--Здесь будут минус и плюс как псевдоэлементы-->
-            </div>
-            <div class="form_line_divided">
+              <button class="minus" type="button">-</button>
+              <input type="number" id="adult" placeholder="2">
+              <button class="plus" type="button">+</button>
               <label for="kids">Дети</label>
-              <input type="text" id="kids" placeholder="0"> <!--Здесь будут минус и плюс как псевдоэлементы-->
+              <button class="minus" type="button">-</button>
+              <input type="number" id="kids" placeholder="0">
+              <button class="plus" type="button">+</button>
             </div>
-            <button type="button">Найти</button>
+            <button type="submit">Найти</button>
           </form>
+
 
           <div class="map" aria-label="Местоположение Седоны на карте"> <!--Карта--></div>
         </div>
