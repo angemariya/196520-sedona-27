@@ -105,14 +105,18 @@
               <input type="text" id="day_out" placeholder="4 июля 2017">
             </div>
             <div class="form_group">
-              <label for="adult">Взрослые</label>
-              <button class="minus" type="button">-</button>
-              <input type="number" id="adult" placeholder="2">
-              <button class="plus" type="button">+</button>
-              <label for="kids">Дети</label>
-              <button class="minus" type="button">-</button>
-              <input type="number" id="kids" placeholder="0">
-              <button class="plus" type="button">+</button>
+              <div class="group_adult">
+                <label for="adult">Взрослые</label>
+                <button class="minus" type="button">-</button>
+                <input type="number" id="adult" placeholder="2">
+                <button class="plus" type="button">+</button>
+              </div>
+              <div class="group_kids">
+                <label for="kids">Дети</label>
+                <button class="minus" type="button">-</button>
+                <input type="number" id="kids" placeholder="0">
+                <button class="plus" type="button">+</button>
+              </div>
             </div>
             <button type="submit">Найти</button>
           </form>

@@ -22,7 +22,32 @@
     <main>
       <section class="hotels_filters">
         <div class="container">
-          <!--Форма-->
+          <form class="hotels_form">
+            <fieldset>
+              <legend>Инфраструктура:</legend>
+              <input type="checkbox" id="waterpool" checked>
+              <label for="waterpool">Бассейн</label>
+              <input type="checkbox" id="parking">
+              <label for="parking">Парковка</label>
+              <input type="checkbox" id="wifi">
+              <label for="wifi">Wi-Fi</label>
+            </fieldset>
+            <fieldset>
+              <legend>Тип жилья:</legend>
+              <input type="checkbox" id="hotel" checked>
+              <label for="hotel">Гостиница</label>
+              <input type="checkbox" id="motel" checked>
+              <label for="motel">Мотель</label>
+              <input type="checkbox" id="apartments" checked>
+              <label for="apartments">Апартаменты</label>
+            </fieldset>
+            <fieldset>
+              <legend>Стоимость в сутки (Р):</legend>
+              <input type="number" placeholder="от 0">
+              <input type="number" placeholder="До 3000">
+              <button type="submit">Показать</button>
+            </fieldset>
+          </form>
         </div>
       </section>
       <section class="hotels">
