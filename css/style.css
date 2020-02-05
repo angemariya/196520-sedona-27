@@ -1,0 +1,185 @@
+body {
+    background-color: #f2f2f2;
+    font-family: 'PT Sans', 'Arial', sans-serif;
+}
+
+.visually-hidden {
+	position: absolute;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0;
+	border:0;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.promo {
+    background-image: url(../img/background_photo.jpg);
+    background-repeat: no-repeat;
+    width: 1200px;
+    height: 800px;
+}
+
+.promo_text {
+    background-color: #fff;
+}
+
+.blue-back {
+    background-color: #81b3d2;
+}
+
+.gray-back {
+    background-color: #eeeeee;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li a  {
+    font-family: "PT Sans";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: #000000;
+    list-style-type: none;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    color: #81b3d2;
+  }
+
+  li a:active {
+    opacity: 0.3;
+  }
+
+.promo_text h2 {
+    color: #000000;
+    font-family: "PT Sans";
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+
+.promo_description {
+    color: #333333;
+    font-family: "PT Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+
+.booking__heading {
+    color: #000000;
+    font-family: "PT Sans";
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    text-transform: uppercase;
+}
+
+.booking__description {
+    color: #333333;
+    font-family: "PT Sans";
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.footer_contacts a {
+    font-family: "PT Sans";
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: #000000;
+    text-decoration: none;
+}
+
+.footer_logo {
+    color: #000000;
+    font-family: "PT Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.footer_logo img {
+    color: #231f20;
+}
+
+.hotels__item .item__name {
+    color: #000000;
+    font-family: "PT Sans";
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+
+.hotels__item .item__name:hover {
+    color: #81b3d2;
+}
+
+.hotels__item .item__name:active{
+    color: #000000;
+    opacity: 0.3;
+}
+
+.type, .price {
+    color: #333333;
+    font-family: "PT Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-transform: uppercase;
+}
+
+.hotels__item a {
+    color: #ffffff;
+    font-family: "PT Sans";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.hotels__item a:active{
+    opacity: 0.3;
+}
+
+.details {
+    background-color: #81b3d2;
+}
+
+.details:hover {
+    background-color: #669ec0;
+}
+
+.details:active{
+    background-color: #5496bd;
+}
+
+.reservation {
+    background-color: #766357;
+}
+
+.reservation:hover {
+    background-color: #604e43;
+}
+
+.reservation:active{
+    background-color: #503e33;
+}
+
+form {
+    display: none;
+}
