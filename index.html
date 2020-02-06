@@ -4,19 +4,19 @@
     <meta charset="utf-8">
     <title>Седона</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header>
       <div class="container">
         <img src="img/logo.png" alt="Логотип города Седона" width="140" height="72">
         <nav class="navigation">
-          <ul>
-            <li><a href="#">Информация</a></li>
-            <li><a href="#">Фото и видео</a></li>
-            <li><a href="#">Карта штата</a></li>
-            <li><a href="catalog.html">Гостиницы</a></li>
+          <ul class="navigation_list">
+            <li class="list_item"><a href="#">Информация</a></li>
+            <li class="list_item"><a href="#">Фото и видео</a></li>
+            <li class="list_item"><a href="#">Карта штата</a></li>
+            <li class="list_item"><a href="catalog.html">Гостиницы</a></li>
           </ul>
         </nav>
       </div>
@@ -38,13 +38,13 @@
           <div class="blue-back">
             <h2>Настоящий
               городок</h2>
-            <span>№1</span> 
+            <span>№1</span>
             <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
           </div>
-          <div class="feature-picture"> 
+          <div class="feature-picture">
             <!--Здесь фото справа-->
           </div>
-          
+
           <div class="white-back">
             <ul>
               <li>
@@ -64,7 +64,7 @@
               </li>
             </ul>
           </div>
-        
+
           <div class="canyon-picture"></div> <!--Photo of canyon-->
           <div class="blue-back">
             <h2>Там есть Мост дьявола</h2>
@@ -73,17 +73,17 @@
           </div>
 
           <div class="gray-back">
-            <div>
+            <div class="benefits_item">
               <h2>Небольшая площадь</h2>
               <span class="number">№3</span>
               <p>Все достопримечательности находятся очень близко</p>
             </div>
-            <div>
+            <div class="benefits_item">
               <h2>Красивая дорога</h2>
               <span class="number">№4</span>
               <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </div>
-            <div>
+            <div class="benefits_item">
               <h2>Мало туристов</h2>
               <span class="number">№5</span>
               <p>Большинство едет в гранд каньон и толпится там</p>
@@ -98,7 +98,7 @@
           <p class="booking__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
           <a class="form_trigger" href="#">Поиск гостиницы в седоне</a>
 
-          <form method="get" action="https://echo.htmlacademy.ru">
+          <form class="main_form" method="get" action="https://echo.htmlacademy.ru">
             <div class="form_group">
               <label for="day_in">дата заезда</label>
               <input type="text" id="day_in" placeholder="24 апреля 2017">
@@ -138,14 +138,14 @@
         </div>
 
         <div class="social">
-          <a href="#" aria-label="Мы в Твиттере"></a> <!--twitter-->
-          <a href="#" aria-label="Мы в Фейсбуке"></a> <!--facebook-->
-          <a href="#" aria-label="Мы в Ютубе"></a> <!--youtube-->
+          <a href="#" aria-label="Мы в Твиттере"></a>
+          <a href="#" aria-label="Мы в Фейсбуке"></a>
+          <a href="#" aria-label="Мы в Ютубе"></a>
         </div>
 
         <a class="footer_logo" href="https://htmlacademy.ru/intensive/htmlcss">
           Website by
-          <img src="img/logo-html.svg" alt="HTML Academy" width="115" height="41">
+          <img src="img/logo-html.svg" alt="HTML Academy" width="115" height="41"
         </a>
       </div>
     </footer>
