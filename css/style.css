@@ -4,13 +4,13 @@ body {
 }
 
 .visually-hidden {
-	position: absolute;
-	clip: rect(1px 1px 1px 1px);
-	clip: rect(1px, 1px, 1px, 1px);
-	padding:0;
-	border:0;
-	height: 1px;
-	width: 1px;
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding:0;
+    border:0;
+    height: 1px;
+    width: 1px;
     overflow: hidden;
 }
 
@@ -187,3 +187,125 @@ body {
 .reservation:active{
     background-color: #503e33;
 }
+
+.canyon-picture {
+    background-image: url(../img/canyon.jpg);
+    background-repeat: no-repeat;
+    width: 800px;
+    height: 400px;
+
+}
+
+.blue-back h2{
+    color: #ffffff;
+    font-family: "PT Sans";
+    font-size: 21px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.blue-back span {
+    color: #ffffff;
+    font-family: "PT Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.blue-back p {
+    color: #ffffff;
+    font-family: "PT Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-transform: uppercase;
+}
+
+.feature-picture {
+    background-image: url(../img/feature-picture.jpg);
+    background-repeat: no-repeat;
+    width: 800px;
+    height: 400px;
+}
+
+.benefits_list {
+    list-style: none;
+}
+
+.benefits_list__header {
+    font-family: "PT Sans";
+    color: #333333;
+    font-size: 21px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.benefits_list__text {
+    color: #333333;
+    font-family: "PT Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-transform: uppercase;
+}
+
+.benefits_item h2 {
+    font-family: "PT Sans";
+    color: #000000;
+    font-size: 21px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.benefits_item .number {
+    font-family: "PT Sans";
+    color:#000000;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.benefits_item p {
+    font-family: "PT Sans";
+    color: #000000;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.hotels_form {
+    background-image: url(../img/filter-background.jpg);
+    background-repeat: no-repeat;
+    width: 1200px;
+    height: 562px;
+}
+
+.hotels_form fieldset {
+    border: 0 none;
+}
+
+.hotels_form legend {
+    font-family: "PT Sans";
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.label_name {
+    font-family: "PT Sans";
+    font-size: 14px;
+    font-weight: 400;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.form_button {
+    font-family: "PT Sans";
+    font-size: 14px;
+    font-weight: 400;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+
