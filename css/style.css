@@ -44,6 +44,7 @@ body {
     margin: 0;
     background-color: #ffffff;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
@@ -157,11 +158,65 @@ body {
 }
 
 .blue-back span {
+    position: relative;
     color: #ffffff;
     font-family: "PT Sans";
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 30px;
+}
+
+.number::before {
+    content: "";
+    width: 8px;
+    height: 2px;
+    background-color: #fff;
+    opacity:0.8;
+    position: absolute;
+    top: 7px;
+    right: 25px;
+}
+  
+.number::after {
+    content: "";
+    width: 8px;
+    height: 2px;
+    background-color: #fff;
+    opacity:0.8;
+    position: absolute;
+    top: 7px;
+    left: 25px;
+}
+
+.benefits_item span{
+    position: relative;
+    color: #000;
+    font-family: "PT Sans";
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.number_black::before {
+    content: "";
+    width: 8px;
+    height: 2px;
+    background-color: #000;
+    opacity:0.7;
+    position: absolute;
+    top: 7px;
+    right: 25px;
+}
+  
+.number_black::after {
+    content: "";
+    width: 8px;
+    height: 2px;
+    background-color: #000;
+    opacity:0.7;
+    position: absolute;
+    top: 7px;
+    left: 25px;
 }
 
 .blue-back .benefit_first_text {
@@ -377,8 +432,9 @@ body {
 .footer_contacts {
     display: flex;
     flex-direction: column;
+    /*
     padding-left: 132px;
-    padding-right: 101px;
+    padding-right: 101px;*/
 }
 
 .footer_contacts a {
@@ -391,7 +447,6 @@ body {
 }
 
 .footer_contacts a:nth-of-type(1) {
-    margin-top: 36px;
     margin-bottom: 16px;
 }
 
@@ -404,15 +459,10 @@ body {
     text-decoration: none;
 }
 
-.footer_logo img {
-    color: #231f20;
-}
-
 .footer_logo {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 39px;
 }
 
 .footer_logo svg{
@@ -440,8 +490,28 @@ footer .container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-top: 36px;
+    padding-left: 132px;
     padding-right: 101px;
+    /*padding-right: 101px;*/
 }
+
+.social {
+    display: flex;
+    width: 150px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+  
+.social_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 48px;
+    background-color: #81b3d1;
+}
+  
 
 /* Catalog.html*/
 
