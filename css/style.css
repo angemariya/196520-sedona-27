@@ -16,10 +16,6 @@ body {
     overflow: hidden;
 }
 
-.main_form {
-    display: none;
-}
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -105,6 +101,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
 }
 
 .promo_text h2 {
@@ -120,6 +117,16 @@ body {
     margin-bottom: 34px;
     margin-top: 59px;
     
+}
+
+.promo_text::before{
+    content:"";
+    position: absolute;
+    bottom: 215px;
+    background-image: url(../img/polygon.png);
+    background-position: center;
+    width: 1200px;
+    height: 59px;
 }
 
 .promo_description {
@@ -170,8 +177,7 @@ body {
     content: "";
     width: 8px;
     height: 2px;
-    background-color: #fff;
-    opacity:0.8;
+    background-color: #bcd6e6;
     position: absolute;
     top: 7px;
     right: 25px;
@@ -181,8 +187,7 @@ body {
     content: "";
     width: 8px;
     height: 2px;
-    background-color: #fff;
-    opacity:0.8;
+    background-color: #bcd6e6;
     position: absolute;
     top: 7px;
     left: 25px;
@@ -201,8 +206,7 @@ body {
     content: "";
     width: 8px;
     height: 2px;
-    background-color: #000;
-    opacity:0.7;
+    background-color: #979797;
     position: absolute;
     top: 7px;
     right: 25px;
@@ -212,8 +216,7 @@ body {
     content: "";
     width: 8px;
     height: 2px;
-    background-color: #000;
-    opacity:0.7;
+    background-color: #979797;
     position: absolute;
     top: 7px;
     left: 25px;
@@ -368,12 +371,113 @@ body {
 
 /* Section booking*/
 
+
 .booking .container {
     min-height: 291px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+}
+
+.main_form {
+    position: absolute;
+    z-index: 1;
+    top: 314px;
+    background-color: #fff;
+    width: 568px;
+    height: 395px;
+    box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
+    display: flex;
+    flex-direction: column;
+}
+
+.form_wrapper {
+    margin: auto;
+}
+
+.form_group {
+    width: 460px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: baseline;
+}
+
+.form_group:nth-child(3) {
+    display: flex;
+    flex-direction: row;
+    width: 460px;
+}
+
+.group_adult {
+    width: 50%;
+}
+
+.group_kids{
+    width: 50%;
+
+}
+.form_group input {
+    background-color: #f2f2f2;
+    border: none;
+    height: 38px;
+    width: 345px;
+    padding-left: 13px;
+}
+
+.group_kids input{
+    width: 115px;
+
+}
+
+.group_adult input{
+    width: 115px;
+}
+
+
+.form_group_label {
+    margin-right: 17px;
+    font-size: 14px;
+    color: #000000;
+    font-family: "PT Sans";
+    font-weight: 700;
+    text-transform: uppercase;
+
+}
+
+
+.form_group input::-webkit-input-placeholder {
+    font-size: 14px;
+    color: #000000;
+    font-family: "PT Sans";
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.form_group input::after {
+    position: absolute;
+    content: "";
+    background-image: url(../img/icons/calendar.svg);
+    width: 21px;
+    height: 22px;
+    top: 10px;
+}
+
+.main_form_button {
+    display: block;
+    margin: 0 auto;
+    background-color: #81b3d1;
+    font-size: 21px;
+    line-height: 26px;
+    color: #ffffff;
+    font-family: "PT Sans";
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .booking__heading {
