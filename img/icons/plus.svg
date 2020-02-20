@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 11" width="11" height="11">
+	<defs>
+		<image width="11" height="11" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALAgMAAADUwp+1AAAAAXNSR0IB2cksfwAAAAxQTFRFAAAAqampqampqampb/74dgAAAAR0Uk5TAMz/7v+wO7MAAAAhSURBVHicY2BIYWBgWIHAWauWMKxatYLh1ao1KOIMbxgA6eoLNQtdo0wAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<g id="search form">
+		<use id="" href="#img1" x="0" y="0" />
+	</g>
+</svg>

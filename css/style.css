@@ -387,7 +387,7 @@ body {
     top: 314px;
     background-color: #fff;
     width: 568px;
-    height: 395px;
+    min-height: 395px;
     box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
     display: flex;
     flex-direction: column;
@@ -402,24 +402,17 @@ body {
     margin-bottom: 30px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: baseline;
 }
 
-.form_group:nth-child(3) {
+.form_group:nth-of-type(3) {
     display: flex;
     flex-direction: row;
-    width: 460px;
+    justify-content: space-between;
+    padding: 0;
 }
 
-.group_adult {
-    width: 50%;
-}
-
-.group_kids{
-    width: 50%;
-
-}
 .form_group input {
     background-color: #f2f2f2;
     border: none;
@@ -432,17 +425,29 @@ body {
 .group_kids input{
     width: 115px;
     text-align: center;
+    padding: 0;
+}
 
+.group_adult input::-webkit-input-placeholder{
+    width: 115px;
+    text-align: center;
+    padding: 0;
 }
 
 .group_adult input{
     width: 115px;
-    text-align: center;
+    padding: 0;
+}
+
+.group_adult {
+    width: 50%;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
 }
 
 .form_group_label {
     width: 92px;
-    margin-right: 17px;
     font-size: 14px;
     color: #000000;
     font-family: "PT Sans";
@@ -464,21 +469,100 @@ body {
     width: 21px;
     height: 22px;
     background-image: url(../img/calendar.svg);
-    transform: translate(-10px, 10px);
+    transform: translate(430px, 10px);
 }
 
-.minus, .plus {
-    position: absolute;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+/* Кнопки + и - в форме*/
+
+.group_adult .plus_button {
+    border: none;
+    width:12px;
+    height: 12px;
+    position: relative;
+    bottom: 3px;
+    right: 20px;
+}
+
+.group_kids .plus_button {
+    border: none;
+    width:12px;
+    height: 12px;
+    position: relative;
+    right: 25px;
+}
+  
+.plus_icon {
+    width: 12px;
+    height: 4px;
+    background-color: #a9a9a9;
+    position: relative;
+    right: 6px;
+}
+  
+.plus_icon::after{
+    content: "";
+    width: 4px;
+    height: 12px;
+    background-color: #a9a9a9;
+    position: absolute; 
+    left: 4px;
+    bottom: -4px;
+}
+  
+  .plus_icon:hover {
+    background-color: #000;
+}
+  
+  .plus_icon:hover:after {
+    background-color: #000;
+}
+   
+  .plus_icon:active{
+    background-color: #81b3d2;
+}
+  
+  .plus_icon:active:after{
+    background-color: #81b3d2;
+}
+.group_adult .minus_button {
+    position: relative;
+    top: -5px;
+    left: 22px;
     z-index: 1;
+    border:none;
+    width:12px;
+    height: 12px;
+}
+.group_kids .minus_button {
+    position: relative;
+    z-index: 1;
+    border:none;
+    width:12px;
+    height: 12px;
 }
 
-.minus {
-    transform: translate(5px, 7px)
+.minus_icon {
+    width: 12px;
+    height: 4px;
+    background-color: #a9a9a9;
+    position: absolute;
+    top: 4px;
+    right: 0px;
+}
+  
+.minus_icon:hover{
+    background-color: #000;
+}
+  
+.minus_icon:active{
+    background-color: #81b3d2;
 }
 
-.plus {
-    transform: translate(-30px, 7px);
-}
+/**/
 
 .main_form_button {
     display: block;
@@ -493,6 +577,16 @@ body {
     text-align: center;
     text-transform: uppercase;
 }
+
+.main_form_button:hover {
+    background-color:#669ec0;
+}
+
+.main_form_button:active {
+    background-color:#5496bd;
+    color: rgba(255, 255, 255, 0.3);
+}
+
 
 .booking__heading {
     color: #000000;
@@ -537,7 +631,7 @@ body {
     background-color: #503e33;
 }
 
-.map {   /*Временно*/
+.map {                                                  /*Временно*/
     position: relative;
     background-image: url(../img/map.png);
     background-repeat: no-repeat;
@@ -550,9 +644,6 @@ body {
 .footer_contacts {
     display: flex;
     flex-direction: column;
-    /*
-    padding-left: 132px;
-    padding-right: 101px;*/
 }
 
 .footer_contacts a {
@@ -735,12 +826,19 @@ footer .container {
     position: relative;
 }
 
-.icon_stars {
+.rating_star {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: flex-start;
 }
 
-.icon_stars:before{
+.icon_star{
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+}
+
+.icon_star:before{
     position: absolute;
     content: "";
     background-image: url(../img/icons/star.svg);
@@ -924,6 +1022,33 @@ footer .container {
 
 .sorting_filter_item.inactive_item{
     border-bottom: 1px dashed #81b3d2; 
+}
+/*Кнопки переключения сортировки*/
+
+.arrow_up {
+    border: none;
+    background-color: transparent;
+}
+  
+.arrow_up-svg path:hover{
+    fill: #000;
+}
+  
+.arrow_up-svg path:active{
+    fill: #81b3d2;
+}
+  
+.arrow_down {
+    border: none;
+    background-color: transparent;
+}
+  
+.arrow_down-svg path:hover{
+    fill: #000;
+}
+  
+.arrow_down-svg path:active{
+    fill: #81b3d2;
 }
 
 /*Чекбоксы у подписей*/
