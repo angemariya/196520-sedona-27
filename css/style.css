@@ -16,6 +16,10 @@ body {
     overflow: hidden;
 }
 
+h2, p {
+    margin: 0;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -26,6 +30,13 @@ body {
     position: relative;
 }
 
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: #fff;
+}
+
 .navigation_logo{
     position: absolute;
     top: 0;
@@ -33,11 +44,14 @@ body {
     transform: translateX(-50%);
 }
 
+.center_wrapper {
+    max-width: 1056px;
+}
+
 .navigation_list {
     min-height: 56px;
-    padding-left: 72px;
-    padding-right: 72px;
     margin: 0;
+    padding: 0;
     background-color: #ffffff;
     display: flex;
     flex-wrap: wrap;
@@ -77,21 +91,18 @@ body {
 }
 
 /*Section Promo*/
+.img_center {
+    min-height: 504px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .promo {
     background-image: url(../img/background_photo.jpg);
     background-repeat: no-repeat;
+    background-position: 100% 100%;
     width: 1200px;
-    height: 773px;
-    margin: 0 auto;
-    box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
-}
-
-.promo_welcome {
-    display: block;
-    margin: 0 auto;
-    padding-top: 76px;
-    padding-bottom: 140px;
 }
 
 .promo_text {
@@ -113,10 +124,7 @@ body {
     line-height: 26px;
     text-transform: uppercase;
     text-align: center;
-    margin: 0 auto;
-    margin-bottom: 34px;
-    margin-top: 59px;
-    
+    margin-bottom: 38px;
 }
 
 .promo_text::before{
@@ -131,25 +139,32 @@ body {
 
 .promo_description {
     width: 490px;
-    margin: 0;
     color: #333333;
     font-family: "PT Sans";
     font-size: 14px;
     font-weight: 400;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 54px;
 }
 
 .blue-back {
     background-color: #81b3d2;
     width: 400px;
-    height: 256px;
+    min-height: 256px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
+.benefits_wrapper {
+    min-height: 146px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .blue-back .benefit_first_header{
     width: 124px;
 }
@@ -161,7 +176,7 @@ body {
     text-transform: uppercase;
     text-align: center;
     margin: 0;
-    margin-bottom: 30px;
+
 }
 
 .blue-back span {
@@ -170,7 +185,6 @@ body {
     font-family: "PT Sans";
     font-size: 14px;
     font-weight: 400;
-    margin-bottom: 30px;
 }
 
 .number::before {
@@ -199,7 +213,6 @@ body {
     font-family: "PT Sans";
     font-size: 14px;
     font-weight: 400;
-    margin-bottom: 30px;
 }
 
 .number_black::before {
@@ -268,15 +281,18 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     padding: 0;
     width:33%
-    
 }
 
-.benefits_icon {
-    margin-bottom: 29px;
+.benefits_item_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 185px;
 }
+
 
 .benefits_list__header {
     font-family: "PT Sans";
@@ -295,9 +311,8 @@ body {
     line-height: 21px;
     text-transform: uppercase;
     text-align: center;
-    margin: 0;
-    padding-top: 28px;
     width: 284px;
+    margin: 0;
 }
 
 .benefit_second {
@@ -319,7 +334,6 @@ body {
     font-size: 14px;
     font-weight: 400;
     margin: 0;
-    margin-bottom: 30px;
 }
 
 .benefits_item p {
@@ -338,6 +352,7 @@ body {
 .benefits_item {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 33%;
 }
@@ -351,19 +366,16 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
+    min-height: 256px;
 }
 
 .benefit_rest_header {
-    margin-top: 50px;
-    margin-bottom: 29px;
     width: 120px;
     text-align: center;
 }
 
 .benefit_rest_text {
     margin: 0;
-    margin-bottom: 64px;
     width: 262px;
     line-height: 21px;
     text-align: center;
@@ -372,19 +384,28 @@ body {
 /* Section booking*/
 
 
-.booking .container {
-    min-height: 291px;
-    background-color: #fff;
+.booking {
+    position: relative;
+    min-height: 290px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    position: relative;
+    background-color: #fff;
+}
+
+.booking_text_wrapper{
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .main_form {
     position: absolute;
     z-index: 1;
-    top: 314px;
+    top: 290px;
     background-color: #fff;
     width: 568px;
     min-height: 395px;
@@ -402,7 +423,7 @@ body {
     margin-bottom: 30px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: baseline;
 }
 
@@ -428,6 +449,10 @@ body {
     padding: 0;
 }
 
+.group_kids .form_group_label {
+    width: 65px;
+}
+
 .group_adult input::-webkit-input-placeholder{
     width: 115px;
     text-align: center;
@@ -443,16 +468,20 @@ body {
     width: 50%;
     display: flex;
     align-items: baseline;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .form_group_label {
-    width: 92px;
+    width: 108px;
     font-size: 14px;
     color: #000000;
     font-family: "PT Sans";
     font-weight: 700;
     text-transform: uppercase;
+}
+
+.form_group_input {
+    position: relative;
 }
 
 .form_group input::-webkit-input-placeholder {
@@ -479,20 +508,30 @@ input::-webkit-inner-spin-button {
 /* Кнопки + и - в форме*/
 
 .group_adult .plus_button {
+    position: absolute;
+    right: 13px;
+    bottom: 13px;
     border: none;
-    width:12px;
+    width: 12px;
     height: 12px;
-    position: relative;
-    bottom: 3px;
-    right: 20px;
+ 
+}
+
+.group_kids {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: flex-end;
 }
 
 .group_kids .plus_button {
+    position: absolute;
+    top: 13px;
+    right: 13px;
     border: none;
-    width:12px;
+    width: 12px;
     height: 12px;
-    position: relative;
-    right: 25px;
 }
   
 .plus_icon {
@@ -529,16 +568,18 @@ input::-webkit-inner-spin-button {
     background-color: #81b3d2;
 }
 .group_adult .minus_button {
-    position: relative;
-    top: -5px;
-    left: 22px;
+    position: absolute;
+    top: 13px;
+    left: 13px;
     z-index: 1;
     border:none;
-    width:12px;
+    width: 12px;
     height: 12px;
 }
 .group_kids .minus_button {
-    position: relative;
+    position: absolute;
+    top: 13px;
+    left: 13px;
     z-index: 1;
     border:none;
     width:12px;
@@ -587,15 +628,14 @@ input::-webkit-inner-spin-button {
     color: rgba(255, 255, 255, 0.3);
 }
 
-
 .booking__heading {
+    margin: 0;
     color: #000000;
     font-family: "PT Sans";
     font-size: 30px;
     font-weight: 700;
     text-transform: uppercase;
-    margin-top: 57px;
-    margin-bottom: 37px;
+    margin-bottom: 32px;
 }
 
 .booking__description {
@@ -608,7 +648,6 @@ input::-webkit-inner-spin-button {
     text-align: center;
     line-height: 1.7;
     margin: 0;
-    margin-bottom: 52px;
 }
 
 .form_trigger {
@@ -632,14 +671,32 @@ input::-webkit-inner-spin-button {
 }
 
 .map {                                                  /*Временно*/
-    position: relative;
     background-image: url(../img/map.png);
     background-repeat: no-repeat;
     min-height: 593px;
-    min-width: 1200px;
+    width: 1200px;    
+    margin-bottom: -120px;
 }
 
 /*Footer*/
+
+footer {
+    position: relative;
+    z-index: 1;
+    margin-bottom: -120px;
+    background-color: rgba(255, 255, 255, 0.9);
+    min-height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:967px;
+}
 
 .footer_contacts {
     display: flex;
@@ -688,22 +745,7 @@ svg path:active {
     fill: #bdbbbc;
 }
 
-footer .container {
-    min-width: 1200px;
-    min-height: 120px;
-    background-color: #fff;
-    opacity: 0.9;
-}
 
-.flex_wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-top: 36px;
-    padding-left: 132px;
-    padding-right: 101px;
-    /*padding-right: 101px;*/
-}
 
 .social {
     display: flex;
@@ -1202,6 +1244,3 @@ footer .container {
     background: #ffffff;
     color: #000000;
 }
-
-
-

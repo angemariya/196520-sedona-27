@@ -8,39 +8,40 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="header">
-      <div class="container">
+    <div class="container">
+      <header class="header">
         <img class="navigation_logo" src="img/logo.png" alt="Логотип города Седона" width="140" height="72">
         <nav class="navigation">
-          <ul class="navigation_list">
-            <li class="list_item"><a href="#">Информация</a></li>
-            <li class="list_item"><a href="#">Фото и видео</a></li>
-            <li class="list_item"><a href="#">Карта штата</a></li>
-            <li class="list_item"><a href="catalog.html">Гостиницы</a></li>
-          </ul>
+          <div class="center_wrapper">
+            <ul class="navigation_list">
+              <li class="list_item"><a href="#">Информация</a></li>
+              <li class="list_item"><a href="#">Фото и видео</a></li>
+              <li class="list_item"><a href="#">Карта штата</a></li>
+              <li class="list_item"><a href="catalog.html">Гостиницы</a></li>
+            </ul>
+          </div>
         </nav>
-      </div>
-    </header>
-
-    <main>
-      <section class="promo"> <!--Background photo-->
-        <div class="container">
+      </header>
+      <main>
+        <section class="promo"> <!--Background photo-->
           <h1 class="visually-hidden">Добро пожаловать в великолепную Седону</h1>
-          <img class="promo_welcome" src="img/welcome.svg" alt="" width="459" height="353">
+          <div class="img_center">
+            <img class="promo_welcome" src="img/welcome.svg" alt="" width="459" height="353">
+          </div>
           <div class="promo_text">
             <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
             <p class="promo_description">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
           </div>
-        </div>
-      </section>
-      <section class="benefits">
-        <div class="container">
+        </section>
+        <section class="benefits">
           <div class="benefit_first">
             <div class="blue-back">
-              <h2 class="benefit_first_header">Настоящий
-                городок</h2>
-              <span class="number">№1</span>
-              <p class="benefit_first_text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+              <div class="benefits_wrapper">
+                <h2 class="benefit_first_header">Настоящий
+                  городок</h2>
+                <span class="number">№1</span>
+                <p class="benefit_first_text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+              </div>
             </div>
             <div class="feature-picture">
               <!--Здесь фото справа-->
@@ -49,19 +50,25 @@
           <div class="white-back">
             <ul class="benefits_list">
               <li>
-                <img class="benefits_icon"src="img/icons/icon-1.svg" alt="" width="75" height="72">
-                <h2 class="benefits_list__header">Жильё</h2>
-                <p class="benefits_list__text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+                <div class="benefits_item_wrapper">
+                  <img class="benefits_icon"src="img/icons/icon-1.svg" alt="" width="75" height="72">
+                  <h2 class="benefits_list__header">Жильё</h2>
+                  <p class="benefits_list__text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+                </div>
               </li>
               <li>
-                <img class="benefits_icon"src="img/icons/icon-2.svg" alt="" width="74" height="70">
-                <h2 class="benefits_list__header">Еда</h2>
-                <p class="benefits_list__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p class="benefits_list__text">
+                <div class="benefits_item_wrapper">
+                  <img class="benefits_icon"src="img/icons/icon-2.svg" alt="" width="74" height="70">
+                  <h2 class="benefits_list__header">Еда</h2>
+                  <p class="benefits_list__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p class="benefits_list__text">
+                </div>
               </li>
               <li>
-                <img class="benefits_icon"src="img/icons/icon-3.svg" alt="" width="64" height="76">
-                <h2 class="benefits_list__header">Сувениры</h2>
-                <p class="benefits_list__text">Не только китайского, но и местного производства!</p>
+                <div class="benefits_item_wrapper">
+                  <img class="benefits_icon"src="img/icons/icon-3.svg" alt="" width="64" height="76">
+                  <h2 class="benefits_list__header">Сувениры</h2>
+                  <p class="benefits_list__text">Не только китайского, но и местного производства!</p>
+                </div>
               </li>
             </ul>
           </div>
@@ -69,38 +76,45 @@
           <div class="benefit_second">
             <div class="canyon-picture"></div> <!--Photo of canyon-->
             <div class="blue-back">
-              <h2 class="benefit_second_header">Там есть Мост дьявола</h2>
-              <span class="number">№2</span>
-              <p class="benefit_second_text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+              <div class="benefits_wrapper">
+                <h2 class="benefit_second_header">Там есть Мост дьявола</h2>
+                <span class="number">№2</span>
+                <p class="benefit_second_text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+              </div>
             </div>
           </div>
 
           <div class="benefit_rest">
             <div class="benefits_item">
-              <h2 class="benefit_rest_header">Небольшая площадь</h2>
-              <span class="number_black">№3</span>
-              <p class="benefit_rest_text">Все достопримечательности находятся очень близко</p>
+              <div class="benefits_wrapper">
+                <h2 class="benefit_rest_header">Небольшая площадь</h2>
+                <span class="number_black">№3</span>
+                <p class="benefit_rest_text">Все достопримечательности находятся очень близко</p>
+              </div>
             </div>
             <div class="benefits_item">
-              <h2 class="benefit_rest_header">Красивая дорога</h2>
-              <span class="number_black">№4</span>
-              <p class="benefit_rest_text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+              <div class="benefits_wrapper">
+                <h2 class="benefit_rest_header">Красивая дорога</h2>
+                <span class="number_black">№4</span>
+                <p class="benefit_rest_text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+              </div>
             </div>
             <div class="benefits_item">
-              <h2 class="benefit_rest_header">Мало туристов</h2>
-              <span class="number_black">№5</span>
-              <p class="benefit_rest_text">Большинство едет в гранд каньон<br> и толпится там</p>
+              <div class="benefits_wrapper">
+                <h2 class="benefit_rest_header">Мало туристов</h2>
+                <span class="number_black">№5</span>
+                <p class="benefit_rest_text">Большинство едет в гранд каньон<br> и толпится там</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="booking">
-        <div class="container">
-          <p class="booking__heading">Заинтересовались?</p>
-          <p class="booking__description">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        <section class="booking">
+          <div class="booking_text_wrapper">
+            <p class="booking__heading">Заинтересовались?</p>
+            <p class="booking__description">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
+          </div>
           <a class="form_trigger" href="#">Поиск гостиницы в седоне</a>
-
           <form class="main_form" method="get" action="https://echo.htmlacademy.ru">
           <div class="form_wrapper">
             <div class="form_group">
@@ -116,40 +130,43 @@
             <div class="form_group">
               <div class="group_adult">
                 <label class="form_group_label" for="adult">Взрослые:</label>
-                <button class="minus_button"><div class="minus_icon"></div></button>
-                <input type="number" id="adult" placeholder="2">
-                <button class="plus_button"><div class="plus_icon"></div></button>
+                <div class="form_group_input">
+                  <button class="minus_button"><div class="minus_icon"></div></button>
+                  <input type="number" id="adult" placeholder="2">
+                  <button class="plus_button"><div class="plus_icon"></div></button>
+                </div>
               </div>
               <div class="group_kids">
                 <label class="form_group_label" for="kids">Дети:</label>
-                <button class="minus_button"><div class="minus_icon"></div></button>
-                <input type="number" id="kids" placeholder="0">
-                <button class="plus_button"><div class="plus_icon"></div></button>
+                <div class="form_group_input">
+                  <button class="minus_button"><div class="minus_icon"></div></button>
+                  <input type="number" id="kids" placeholder="0">
+                  <button class="plus_button"><div class="plus_icon"></div></button>
+                </div>
               </div>
             </div>
             <button class="main_form_button" type="submit">Найти</button>
           </div>
           </form>
-
+        </section>
+        <section class="map_section">
           <div class="map" aria-label="Местоположение Седоны на карте"> <!--Карта--></div>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
 
-    <footer>
-      <div class="container">
+      <footer>
         <div class="flex_wrapper">
           <div class="footer_contacts">
             <a href="#">#visitsedona</a>
             <a href="tel:+74956660266">Тел: +7(495) 666-02-66</a>
           </div>
-  
+
           <div class="social">
             <a class="social_icon" href="#" aria-label="Мы в Твиттере"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15" viewBox="0 0 17 15"><path fill="#FFF" d="M10.95.144c1.685-.496 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708a2.345 2.345 0 0 1-.857 1.768c.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.119C1.705 8.247.374 7.53.448 5.33c.285.328 1.067.536 1.34.472C1.085 5.561-.182 2.442.894.85c1.818 1.854 3.735 3.606 7.152 3.773C8.254 2.33 9.183.793 10.95.144z"/></svg></a>
             <a class="social_icon" href="#" aria-label="Мы в Фейсбуке"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22"><path fill="#FFF" d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z"/></svg></a>
             <a class="social_icon" href="#" aria-label="Мы в Ютубе"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16" viewBox="0 0 20 16"><path fill="#FFF" d="M17 0H3C1.35 0 0 1.35 0 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM6.027 11.998V4.002L15.014 8l-8.987 3.998z"/></svg></a>
           </div>
-  
+
           <a class="footer_logo" href="https://htmlacademy.ru/intensive/htmlcss">
             <span>Website by</span>
             <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 113 39">
@@ -157,7 +174,7 @@
             </svg>
           </a>
         </div>
-      </div>
-    </footer>
+      </footer>      
+    </div>
   </body>
 </html>
