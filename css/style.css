@@ -20,7 +20,7 @@ h2, p {
     margin: 0;
 }
 
-.container {
+.main-container {
     max-width: 1200px;
     margin: 0 auto;
     box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
@@ -53,7 +53,7 @@ h2, p {
 
 
 .navigation_list {
-    min-height: 56px;
+    min-height: 55px;
     margin: 0;
     padding: 0;
     background-color: #ffffff;
@@ -159,27 +159,23 @@ h2, p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.benefits_wrapper {
-    min-height: 146px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    padding: 15px;
+    box-sizing: border-box;
 }
 
 .blue-back .benefit_first_header{
     width: 124px;
 }
-.blue-back .benefit_first_header, .benefit_second_header{
+
+.blue-back .benefit_first_header, 
+.benefit_second_header{
     color: #ffffff;
     font-family: "PT Sans";
     font-size: 21px;
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
-    margin: 0;
+    margin-bottom: 27px;
 
 }
 
@@ -189,6 +185,7 @@ h2, p {
     font-family: "PT Sans";
     font-size: 14px;
     font-weight: 400;
+    margin-bottom: 26px;
 }
 
 .number::before {
@@ -217,6 +214,7 @@ h2, p {
     font-family: "PT Sans";
     font-size: 14px;
     font-weight: 400;
+    margin-bottom: 26px;
 }
 
 .number_black::before {
@@ -240,7 +238,7 @@ h2, p {
 }
 
 .blue-back .benefit_first_text {
-    width: 280px;
+    width: 305px;
 }
 
 .blue-back .benefit_second_text {
@@ -255,7 +253,7 @@ h2, p {
     line-height: 21px;
     text-transform: uppercase;
     text-align: center;
-    margin: 0;
+
 }
 
 .feature-picture {
@@ -284,9 +282,12 @@ h2, p {
 .benefits_list li {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
+    align-items: center;
     padding: 0;
-    width:33%
+    width: 400px;
+    padding: 15px;
+    box-sizing: border-box;
 }
 
 .benefits_item_wrapper {
@@ -299,13 +300,48 @@ h2, p {
 
 
 .benefits_list__header {
+    position: relative;
     font-family: "PT Sans";
     color: #333333;
     font-size: 21px;
     font-weight: 700;
     text-transform: uppercase;
-    margin: 0;
+    margin-bottom: 25px;
 }
+
+/*Иконки для benefits_list*/
+
+.housing::before{
+    position: absolute;
+    content: "";
+    background-image: url(../img/icons/icon-1.svg);
+    width: 75px;
+    height: 72px;
+    bottom: 50px;
+    left: -5px;
+}
+
+.food::before{
+    position: absolute;
+    content: "";
+    background-image: url(../img/icons/icon-2.svg);
+    width: 74px;
+    height: 70px;
+    bottom: 50px;
+    left: -17px;
+}
+
+.souvenire::before {
+    position: absolute;
+    content: "";
+    background-image: url(../img/icons/icon-3.svg);
+    width: 64px;
+    height: 76px;
+    bottom: 50px;
+    left: 20px;
+}
+
+/**/
 
 .benefits_list__text {
     color: #333333;
@@ -315,8 +351,8 @@ h2, p {
     line-height: 21px;
     text-transform: uppercase;
     text-align: center;
-    width: 284px;
-    margin: 0;
+    width: 295px;
+    margin-bottom: 67px;
 }
 
 .benefit_second {
@@ -356,9 +392,11 @@ h2, p {
 .benefits_item {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    width: 33%;
+    width: 400px;
+    padding: 15px;
+    box-sizing: border-box;
 }
 
 .benefit_second_header {
@@ -376,6 +414,7 @@ h2, p {
 .benefit_rest_header {
     width: 120px;
     text-align: center;
+    margin-bottom: 27px;
 }
 
 .benefit_rest_text {
@@ -383,6 +422,7 @@ h2, p {
     width: 262px;
     line-height: 21px;
     text-align: center;
+    margin-bottom: 43px;
 }
 
 /* Section booking*/
@@ -393,17 +433,9 @@ h2, p {
     min-height: 290px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-}
-
-.booking_text_wrapper{
-    min-height: 150px;
-    display: flex;
-    flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    background-color: #fff;
 }
 
 .main_form {
@@ -416,10 +448,8 @@ h2, p {
     box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
     display: flex;
     flex-direction: column;
-}
-
-.form_wrapper {
-    margin: auto;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .form_group {
@@ -431,12 +461,6 @@ h2, p {
     align-items: baseline;
 }
 
-.form_group:nth-of-type(3) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0;
-}
 
 .form_group input {
     background-color: #f2f2f2;
@@ -505,9 +529,25 @@ h2, p {
     position: absolute;
     width: 21px;
     height: 22px;
-    background-image: url(../img/calendar.svg);
     transform: translate(430px, 10px);
 }
+
+.icon_calender:hover path{
+    fill: #000;
+}
+
+.icon_calender:hover rect{
+    fill: #000;
+}
+
+.icon_calender:active path{
+    fill: #81b3d2;
+}
+
+.icon_calender:active rect{
+    fill: #81b3d2;
+}
+
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -527,7 +567,6 @@ input::-moz-inner-spin-button {
     border: none;
     width: 12px;
     height: 12px;
- 
 }
 
 .group_kids {
@@ -616,6 +655,11 @@ input::-moz-inner-spin-button {
     background-color: #81b3d2;
 }
 
+.wrapper_form_groups {
+    min-height: 175px;
+    margin-bottom: 22px;
+}
+
 /**/
 
 .main_form_button {
@@ -630,6 +674,7 @@ input::-moz-inner-spin-button {
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
+    margin-bottom: 55px;
 }
 
 .main_form_button:hover {
@@ -648,7 +693,7 @@ input::-moz-inner-spin-button {
     font-size: 30px;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 32px;
+    margin-bottom: 30px;
 }
 
 .booking__description {
@@ -660,12 +705,12 @@ input::-moz-inner-spin-button {
     text-transform: uppercase;
     text-align: center;
     line-height: 1.7;
-    margin: 0;
+    margin-bottom: 47px;
 }
 
 .form_trigger {
     display: block;
-    padding: 35px 140px;
+    padding: 32px 140px;
     color: #fff;
     background-color: #766357;
     text-transform: uppercase;
@@ -700,20 +745,16 @@ footer {
     background-color: rgba(255, 255, 255, 0.9);
     min-height: 120px;
     display: flex;
-    justify-content: center;
     align-items: center;
-}
-
-.flex_wrapper {
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    width:967px;
+    padding-left: 132px;
+    padding-right: 101px;
 }
 
 .footer_contacts {
     display: flex;
     flex-direction: column;
+    align-items: 
 }
 
 .footer_contacts a {
@@ -726,7 +767,7 @@ footer {
 }
 
 .footer_contacts a:nth-of-type(1) {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
 }
 
 .footer_logo {
@@ -750,21 +791,15 @@ footer {
     margin-left: 8px;
 }
 
-svg path:hover{
-    fill: #81b3d2;
-}
-
-svg path:active {
-    fill: #bdbbbc;
-}
-
-
 
 .social {
     display: flex;
     width: 150px;
     flex-direction: row;
     justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
   
 .social_icon {
@@ -776,6 +811,25 @@ svg path:active {
     background-color: #81b3d1;
 }
   
+.social_icon:hover{
+    background-color: #669ec0;
+}
+
+.social_icon:active{
+    background-color: #5496bd;
+}
+
+.social_icon:active path{
+    fill-opacity: 0.3;
+}
+
+.html_academy_logo path:hover {
+    fill:#81b3d2;
+}
+
+.html_academy_logo path:active {
+    fill: #bdbbbc;
+}
 
 /* Catalog.html*/
 
@@ -808,7 +862,6 @@ svg path:active {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    
 }
 
 .hotels_item {
@@ -822,20 +875,22 @@ svg path:active {
     display: flex;
     flex-direction: column;
     margin-left: 30px;
-    justify-content: space-around;
+    justify-content: flex-start;
 }
 
 .hotel_item__details h3 {
-    margin: 0;
     padding: 0;
-    line-height: 0;
+    margin: 0; 
+    margin-bottom: 15px;
 }
 
 .hotel_item__type {
     width: 178px;
     display: flex;
+    flex-wrap: wrap-reverse;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 14px;
 }
 
 .hotels_item .item_name {
@@ -869,10 +924,6 @@ svg path:active {
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
-}
-
-.hotel_item__buttons {
-    display: inline-block;
 }
 
 .rating {
@@ -921,9 +972,21 @@ svg path:active {
     opacity: 0.3;
 }
 
+.hotel_item__buttons {
+    display: flex;
+    min-height: 27px;
+}
+
+a.more_button:nth-of-type(1) {
+    margin-right: 6px;
+}
+
 .more_button {
     background-color: #81b3d2;
     padding: 6px 16px;
+    min-height: 27px;
+    width: 110px;
+    box-sizing: border-box;
 }
 
 .more_button:hover {
@@ -937,7 +1000,9 @@ svg path:active {
 .reservation_button {
     background-color: #766357;
     padding: 6px 16px;
-    
+    min-height: 27px;
+    width: 142px;
+    box-sizing: border-box;
 }
 
 .reservation_button:hover {
@@ -1032,11 +1097,9 @@ svg path:active {
 
 .search_results {
     min-height: 22px;
-    width: 520px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: baseline;
 }
 
@@ -1047,10 +1110,10 @@ svg path:active {
     font-family: "PT Sans";
     font-weight: 700;
     text-transform: uppercase;
+    margin-right: 49px;
 }
 
 .sorting_filter {
-    width: 240px;
     margin: 0;
     padding: 0;
     font-size: 12px;
@@ -1061,8 +1124,12 @@ svg path:active {
     list-style: none;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items:center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sorting_filter li {
+    margin-right: 33px;
 }
 
 .sorting {
@@ -1071,6 +1138,7 @@ svg path:active {
     font-family: "PT Sans";
     font-weight: 400;
     text-transform: uppercase;
+    margin-right: 40px;
 }
 
 .sorting_filter_item {
@@ -1080,6 +1148,11 @@ svg path:active {
     font-family: "PT Sans";
     font-weight: 400;
     opacity: 0.3;
+    cursor: pointer;
+}
+
+.search_results_switch button {
+    cursor: pointer;
 }
 
 .sorting_filter_item.current_item {
@@ -1089,6 +1162,14 @@ svg path:active {
 .sorting_filter_item.inactive_item{
     border-bottom: 1px dashed #81b3d2; 
 }
+
+.sorting_filter_item:hover {
+    color:#81b3d2;
+}
+.sorting_filter_item:active{
+    color: #000;
+}
+
 /*Кнопки переключения сортировки*/
 
 .arrow_up {
