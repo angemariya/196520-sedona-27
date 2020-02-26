@@ -32,7 +32,6 @@ form_toggle.addEventListener("click",function(evt){
 
 form.addEventListener("submit", function(evt){
     if (!day_in.value || !day_out.value || !adult.value || !kids.value) {
-        evt.preventDefault();
         form.classList.remove("main_form_error");
         form.offsetWidth = form.offsetWidth;
         form.classList.add("main_form_error");
