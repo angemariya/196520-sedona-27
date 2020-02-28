@@ -9,16 +9,16 @@ var kids = document.querySelector("[name=kids]");
 
 /*Открытие при нажатии кнопки*/
 
-form_toggle.addEventListener("click", function(evt) { 
+form_toggle.addEventListener("click", function(evt){
     evt.preventDefault(); 
-    form.classList.toggle("main_form_off");
+    form.classList.toggle("main_form_hidden");
 }
 );
 
 /*Анимация при открытии*/
 
 form_toggle.addEventListener("click",function(evt){
-    if (!form.classList.contains("main_form_off")){
+    if (!form.classList.contains("main_form_hidden")){
         form.classList.add("animation");
     }
     else {
@@ -32,6 +32,7 @@ form_toggle.addEventListener("click",function(evt){
 
 form.addEventListener("submit", function(evt){
     if (!day_in.value || !day_out.value || !adult.value || !kids.value) {
+        evt.preventDefault(); 
         form.classList.remove("main_form_error");
         form.offsetWidth = form.offsetWidth;
         form.classList.add("main_form_error");
@@ -41,11 +42,10 @@ form.addEventListener("submit", function(evt){
 
 /*Выключение формы и сброс классов с помощью клавиши ESC*/
 
-window.addEventListener("keydown", function(evt) {
+window.addEventListener("keydown", function(evt){
     if (evt.keyCode === 27) {
-        if (!form.classList.contains("main_form_off")){
-            evt.preventDefault();
-            form.classList.add("main_form_off");
+        if (!form.classList.contains("main_form_hidden")){
+            form.classList.add("main_form_hidden");
             form.classList.remove("animation");
             form.classList.remove("main_form_error");
         }

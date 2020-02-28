@@ -28,9 +28,9 @@ h2, p {
 }
 
 .mini_container {
-    max-width: 1056px;
-    margin: 0 auto;
-
+    padding-left: 72px;
+    padding-right: 72px;
+    box-sizing: border-box;
 }
 
 .header {
@@ -86,14 +86,21 @@ h2, p {
 
 .list_item:nth-of-type(1) {
     margin-right: 147px;
+    text-align: left;
 }
 
 .list_item:nth-of-type(2) {
     margin-right: 388px;
+    text-align: left;
 }
 
 .list_item:nth-of-type(3) {
     margin-right: 161px;
+    text-align: right;
+}
+
+.list_item:last-of-type {
+    text-align: right;
 }
 
 .list_item a  {
@@ -115,7 +122,7 @@ h2, p {
 
 /*Section Promo*/
 .img_center {
-    min-height: 504px;
+    min-height: 510px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -162,7 +169,7 @@ h2, p {
     line-height: 26px;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 38px;
+    margin-bottom: 30px;
 }
 
 .promo_text::before{
@@ -382,14 +389,18 @@ h2, p {
 
 /*Иконки для benefits_list*/
 
+.benefits_icon{
+    position:relative;
+}
+
 .housing::before{
     position: absolute;
     content: "";
     background-image: url(../img/icons/icon-1.svg);
     width: 75px;
     height: 72px;
-    bottom: 50px;
-    left: -5px;
+    bottom: 28px;
+    right: -38px;
 }
 
 .food::before{
@@ -398,8 +409,8 @@ h2, p {
     background-image: url(../img/icons/icon-2.svg);
     width: 74px;
     height: 70px;
-    bottom: 50px;
-    left: -17px;
+    bottom: 28px;
+    left: -36px;
 }
 
 .souvenire::before {
@@ -408,8 +419,8 @@ h2, p {
     background-image: url(../img/icons/icon-3.svg);
     width: 64px;
     height: 76px;
-    bottom: 50px;
-    left: 20px;
+    bottom: 27px;
+    left: -30px;
 }
 
 /**/
@@ -544,13 +555,15 @@ h2, p {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    padding: 55px;
+    box-sizing: border-box;
 }
 
 .animation {
-    animation: bounce 0.6s;
+    animation: slideInDown 0.6s;
 }
 
-.main_form_off{
+.main_form_hidden{
     visibility: hidden;
 }
 
@@ -563,7 +576,7 @@ h2, p {
     margin-bottom: 30px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: baseline;
 }
 
@@ -572,9 +585,10 @@ h2, p {
     background-color: #f2f2f2;
     border: none;
     height: 38px;
-    width: 345px;
-    padding-left: 13px;
+    width: 344px;
+    padding-left: 12px;
     position: relative;
+    box-sizing: border-box;
 }
 
 .group_kids input{
@@ -774,6 +788,7 @@ input[type='number'] {
     width: 458px;
     height: 58px;
     border: none;
+    padding: 0;
     background-color: #81b3d1;
     font-size: 21px;
     color: #ffffff;
@@ -781,7 +796,6 @@ input[type='number'] {
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 55px;
 }
 
 .main_form_button:hover {
@@ -932,11 +946,11 @@ footer {
     fill-opacity: 0.3;
 }
 
-.html_academy_logo path:hover {
+.footer_logo:hover path {
     fill:#81b3d2;
 }
 
-.html_academy_logo path:active {
+.footer_logo:active path {
     fill: #bdbbbc;
 }
 
@@ -960,12 +974,10 @@ footer {
     border-bottom: 1px solid #e5e5e5;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .hotels_items_wrapper {
-    width: 1056px;
+    width: 1200px;
     min-height: 150px;
     display: flex;
     flex-direction: row;
@@ -994,7 +1006,7 @@ footer {
 }
 
 .hotel_item__type {
-    width: 178px;
+    width: 180px;
     display: flex;
     flex-wrap: wrap-reverse;
     flex-direction: row;
@@ -1052,7 +1064,7 @@ footer {
 .icon_star{
     width: 18px;
     height: 18px;
-    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .icon_star:before{
@@ -1134,9 +1146,13 @@ a.more_button:nth-of-type(1) {
     min-height: 217px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     
+}
+
+.fieldset_wrapper {
+    display: flex;
 }
 
 .hotels_form fieldset {
@@ -1162,7 +1178,8 @@ a.more_button:nth-of-type(1) {
 }
 
 .hotels_form__item{
-    margin-bottom: 23px;
+    display: flex;
+    margin-bottom: 32px;
 }
 
 .label_name {
@@ -1177,6 +1194,10 @@ a.more_button:nth-of-type(1) {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+}
+
+.hotels_form__item:last-child {
+    margin-bottom: 0;
 }
 
 .hotels_form__legend{
@@ -1240,6 +1261,11 @@ a.more_button:nth-of-type(1) {
 .sorting_filter li {
     margin-right: 33px;
 }
+
+.sorting_filter li:last-child {
+    margin-right: 0;
+}
+
 
 .sorting {
     font-size: 12px;
@@ -1326,6 +1352,7 @@ a.more_button:nth-of-type(1) {
     height: 23px;
     background-image: url(../img/icons/checkbox-off.svg);
     margin-left: -40px;
+    bottom: -5px;
 }
 
 .hotels_form__item label:focus::before{
@@ -1465,34 +1492,6 @@ a.more_button:nth-of-type(1) {
 
 
 /*Анимация формы*/
-@-webkit-keyframes bounce {
-    0% {
-      transform: translateY(-300px);
-      -webkit-transform: translateY(-300px);
-    }
-
-    100% {
-      transform: translateY(0);
-      -webkit-transform:  translateY(0);
-    }
-}
-
-@keyframes bounce {
-    0% {
-      transform: translateY(-300px);
-      -webkit-transform: translateY(-300px);
-    }
-
-    100% {
-      transform: translateY(0);
-      -webkit-transform:  translateY(0);
-    }
-}
-
-.bounce {
-    -webkit-animation-name: bounce;
-    animation-name: bounce;
-}
 
 @-webkit-keyframes shake {
     from,
@@ -1548,3 +1547,38 @@ a.more_button:nth-of-type(1) {
     -webkit-animation-name: shake;
     animation-name: shake;
 }
+
+
+
+
+@-webkit-keyframes slideInDown {
+    from {
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+        visibility: visible;
+    }
+
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+        visibility: visible;
+    }
+
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.slideInDown {
+-webkit-animation-name: slideInDown;
+animation-name: slideInDown;
+}
+  
