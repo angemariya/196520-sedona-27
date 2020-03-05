@@ -1,3 +1,4 @@
+
 var form = document.querySelector(".main_form");
 var form_toggle = document.querySelector(".form_trigger");
 
@@ -5,7 +6,6 @@ var day_in = document.querySelector("[name=arrival_date]");
 var day_out = document.querySelector("[name=departure_date]");
 var adult = document.querySelector("[name=adult]");
 var kids = document.querySelector("[name=kids]");
-
 
 /*Открытие при нажатии кнопки*/
 
@@ -52,5 +52,3 @@ window.addEventListener("keydown", function(evt){
     }
 }
 );
-
-
