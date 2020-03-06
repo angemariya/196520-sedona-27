@@ -2,7 +2,6 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=11">
     <title>Седона</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
@@ -98,7 +97,7 @@
           <p class="booking__heading">Заинтересовались?</p>
           <p class="booking__description">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
           <a class="form_trigger" href="#">Поиск гостиницы в седоне</a>
-          <form class="main_form" action="URL" method="get" action="https://echo.htmlacademy.ru">
+          <form class="main_form" method="get" action="URL">
             <div class="wrapper_form_groups">
               <div class="form_group">
                 <label class="form_group_label" for="day_in">Дата заезда:</label>
@@ -122,7 +121,6 @@
                     <rect fill="#cacaca" x="13.781" y="15.112" width="2.625" height="2.066"/>
                     <rect fill="#cacaca" x="13.781" y="11.668" width="2.625" height="2.067"/>
                     <rect fill="#cacaca" x="13.781" y="8.225" width="2.625" height="2.066"/>
-                  </g>
                   </svg>
                 </div>
               </div>
@@ -130,9 +128,8 @@
                 <label class="form_group_label" for="day_out">Дата выезда:</label>
                 <input type="text" id="day_out" name="departure_date" placeholder="4 июля 2017">
                 <div class="icon_calender">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     width="21px" height="22px" viewBox="0 0 21 22" enable-background="new 0 0 21 22" xml:space="preserve">
-                    <g id="calendar_1_">
                       <path fill="#cacaca" d="M19.251,2.025h-2.845V0.648c0-0.381-0.294-0.689-0.656-0.689c-0.363,0-0.656,0.308-0.656,0.689v1.377h-3.938V0.648 c0-0.381-0.294-0.689-0.655-0.689c-0.363,0-0.657,0.308-0.657,0.689v1.377H5.906V0.648c0-0.381-0.294-0.689-0.656-0.689 c-0.363,0-0.657,0.308-0.657,0.689v1.377H1.75C0.784,2.025,0,2.847,0,3.862v16.302C0,21.179,0.784,22,1.75,22h17.501 C20.217,22,21,21.179,21,20.164V3.862C21,2.847,20.217,2.025,19.251,2.025z M19.688,20.164c0,0.253-0.195,0.459-0.437,0.459H1.75 c-0.241,0-0.438-0.206-0.438-0.459V3.862c0-0.253,0.196-0.459,0.438-0.459h2.844v1.378c0,0.381,0.294,0.689,0.657,0.689 c0.362,0,0.656-0.308,0.656-0.689V3.403h3.938v1.378c0,0.381,0.294,0.689,0.657,0.689c0.361,0,0.655-0.308,0.655-0.689V3.403h3.938 v1.378c0,0.381,0.293,0.689,0.656,0.689c0.362,0,0.656-0.308,0.656-0.689V3.403h2.845c0.241,0,0.437,0.206,0.437,0.459V20.164z"/>
                       <rect fill="#cacaca" x="4.594" y="8.225" width="2.625" height="2.066"/>
                       <rect fill="#cacaca" x="4.594" y="11.668" width="2.625" height="2.067"/>
@@ -143,7 +140,6 @@
                       <rect fill="#cacaca" x="13.781" y="15.112" width="2.625" height="2.066"/>
                       <rect fill="#cacaca" x="13.781" y="11.668" width="2.625" height="2.067"/>
                       <rect fill="#cacaca" x="13.781" y="8.225" width="2.625" height="2.066"/>
-                    </g>
                   </svg>
                 </div>
               </div>
@@ -151,17 +147,17 @@
                 <div class="group_adult">
                   <label class="form_group_label" for="adult">Взрослые:</label>
                   <div class="form_group_input">
-                    <button class="minus_button"><div class="minus_icon"></div></button>
+                    <button class="minus_button"><span class="minus_icon"></span></button>
                     <input type="number" id="adult" name="adult" placeholder="2">
-                    <button class="plus_button"><div class="plus_icon"></div></button>
+                    <button class="plus_button"><span class="plus_icon"></span></button>
                   </div>
                 </div>
                 <div class="group_kids">
                   <label class="form_group_label" for="kids">Дети:</label>
                   <div class="form_group_input">
-                    <button class="minus_button"><div class="minus_icon"></div></button>
+                    <button class="minus_button"><span class="minus_icon"></span></button>
                     <input type="number" id="kids" name="kids" placeholder="0">
-                    <button class="plus_button"><div class="plus_icon"></div></button>
+                    <button class="plus_button"><span class="plus_icon"></span></button>
                   </div>
                 </div>
               </div>
@@ -170,7 +166,7 @@
           </form>
         </section>
         <section class="map_section">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d838162.8410384329!2d-111.795138!3d34.854378!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sde!4v1582711478980!5m2!1sru!2sde" width="1200" height="593" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d838162.8410384329!2d-111.795138!3d34.854378!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sde!4v1582711478980!5m2!1sru!2sde" width="1200" height="593" style="border:0;" allowfullscreen=""></iframe>
         </section>
       </main>
 
