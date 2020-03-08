@@ -7,6 +7,10 @@ var day_out = document.querySelector("[name=departure_date]");
 var adult = document.querySelector("[name=adult]");
 var kids = document.querySelector("[name=kids]");
 
+if (form) { 
+    form.classList.toggle("main_form_hidden");
+}
+
 /*Открытие при нажатии кнопки*/
 
 form_toggle.addEventListener("click", function(evt){

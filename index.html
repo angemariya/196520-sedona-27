@@ -2,14 +2,15 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Седона</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.min.css">    
+    <link rel="stylesheet" href="css/style.css">    
   </head>
   <body>
     <div class="main-container">
-      <header class="header mini_container">
+      <header class="header">
         <img class="navigation_logo" src="img/logo.png" alt="Логотип города Седона" width="140" height="72">
         <nav class="navigation">
             <ul class="navigation_list">
@@ -87,7 +88,7 @@
             <div class="benefits_item">
                 <h2 class="benefit_rest_header">Мало туристов</h2>
                 <span class="number_black">№5</span>
-                <p class="benefit_rest_text">Большинство едет в гранд каньон<br> и толпится там</p>
+                <p class="benefit_rest_text last_item">Большинство едет в гранд каньон и толпится там</p>
             </div>
           </div>
         </section>
@@ -96,7 +97,7 @@
           <p class="booking__heading">Заинтересовались?</p>
           <p class="booking__description">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
           <a class="form_trigger" href="#">Поиск гостиницы в седоне</a>
-          <form class="main_form main_form_hidden" method="get" action="URL">
+          <form class="main_form" method="get" action="URL">
             <div class="wrapper_form_groups">
               <div class="form_group">
                 <label class="form_group_label" for="day_in">Дата заезда:</label>
@@ -163,6 +164,7 @@
             </div>
             <button class="main_form_button" type="submit">Найти</button>
           </form>
+
         </section>
         <section class="map_section">
           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d838162.8410384329!2d-111.795138!3d34.854378!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sde!4v1582711478980!5m2!1sru!2sde" width="1200" height="593" style="border:0;" allowfullscreen=""></iframe>
@@ -196,6 +198,6 @@
         </a>
       </footer>      
     </div>
-    <script src="js/script.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
