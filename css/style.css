@@ -61,21 +61,24 @@ body
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0 72px;
 
     list-style-type: none;
 
     background-color: #fff;
+    min-height: 56px;
+    box-sizing: border-box;
 }
 
 .list_item {
 
-    width: 25%;
+    width: 239px;
     margin: 0;
-    padding: 20px 0; 
+    padding: 19px 0; 
     
-    font-weight: bold;
+    font-weight: 700;
     
 }
 
@@ -84,9 +87,13 @@ body
   text-align: right;
 }
 
+.list_item:nth-child(2) {
+    letter-spacing: 0.4px;
+}
+
 .list_item:nth-child(3) {
-    margin-left: 86px;
-    letter-spacing: 0.3px;
+    margin-left: 99px;
+    letter-spacing: 0.4px;
 }
 
 .list_item a
@@ -254,7 +261,7 @@ body
 
     position: relative;
 
-    margin-bottom: 26px;
+    margin-bottom: 25px;
 
     color: #fff;
 }
@@ -418,7 +425,7 @@ body
     position: relative;
 
     margin: 0;
-    margin-bottom: 25px;
+    margin-bottom: 24px;
 
     text-align: center;
     text-transform: uppercase;
@@ -624,7 +631,7 @@ body
     left: 0;
     right: 0;
     margin: 0 auto;
-    padding: 56px;
+    padding: 55px;
 
     background-color: #fff;
     box-shadow: 0 7px 15px 0 rgba(0, 1, 1, .15);
@@ -713,7 +720,7 @@ body
     box-sizing: border-box;
     width: 344px;
     height: 38px;
-    padding-left: 12px;
+    padding-left: 10px;
 
     border: none;
     background-color: #f2f2f2;
@@ -734,7 +741,7 @@ body
 
 .group_adult input
 {
-    width: 115px;
+    width: 111px;
     padding: 0;
 
     text-align: center;
@@ -764,7 +771,7 @@ body
     width: 115px;
 
     text-transform: uppercase;
-    letter-spacing: 0.6px;
+    letter-spacing: 0.3px;
 
     color: #000;
 }
@@ -800,13 +807,12 @@ body
 .icon_calender
 {
     position: absolute;
-    top: 20%;
+    top: 25%;
     right: 10px;
 
     width: 21px;
     height: 22px;
 
-    translate: translateY(-50%);
 }
 
 .icon_calender:hover path
@@ -846,7 +852,7 @@ input[type='number']
 {
     position: absolute;
     right: 13px;
-    bottom: 13px;
+    bottom: 12px;
 
     width: 12px;
     height: 12px;
@@ -937,8 +943,8 @@ input[type='number']
 {
     position: absolute;
     z-index: 1;
-    top: 13px;
-    left: 13px;
+    top: 14px;
+    left: 11px;
 
     width: 12px;
     height: 12px;
@@ -984,7 +990,7 @@ input[type='number']
 .wrapper_form_groups
 {
     min-height: 175px;
-    margin-bottom: 22px;
+    margin-bottom: 25px;
 }
 
 
@@ -1027,9 +1033,10 @@ input[type='number']
     font-weight: 700;
 
     margin: 0;
-    margin-bottom: 28px;
+    margin-bottom: 30px;
 
     text-transform: uppercase;
+    text-align: center;
 
     color: #000;
 }
@@ -1087,16 +1094,8 @@ footer
 
     display: flex;
 
-    height: 1px;
-    min-height: 120px;
-    padding-right: 101px;
-    padding-left: 132px;
-
     background-color: #fff;
 
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
 }
 
 .footer_transparent
@@ -1106,23 +1105,30 @@ footer
     background-color: rgba(255, 255, 255, .9);
 }
 
+.footer_wrapper {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.footer_wrapper:nth-child(1) {
+    display: flex;
+    justify-content: flex-start;
+}
+
+
 .footer_contacts
 {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-        flex-direction: column;
-
-    padding-top: 36px;
-
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 123px;
 }
+
 
 .footer_contacts a
 {
-    font-family: 'PT Sans';
     font-size: 21px;
     font-weight: 700;
 
@@ -1134,12 +1140,11 @@ footer
 
 .footer_contacts a:nth-of-type(1)
 {
-    margin-bottom: 14px;
+    margin-bottom: 10px;
 }
 
 .footer_logo
 {
-    font-family: 'PT Sans';
     font-size: 14px;
     font-weight: 400;
 
@@ -1151,16 +1156,8 @@ footer
 
 .footer_logo
 {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-        flex-direction: row;
-
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
+    flex-direction: row;
     align-items: center;
 }
 
@@ -1173,46 +1170,27 @@ footer
 
 .social
 {
-    position: absolute;
-    bottom: 36px;
-    left: 50%;
-
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-        flex-direction: row;
-
-    width: 150px;
-
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    flex-direction: row;
 }
 
-.social_icon
-{
-    display: -webkit-box;
-    display: -ms-flexbox;
+.social_icon {
     display: flex;
 
     width: 46px;
     height: 48px;
 
     background-color: #81b3d1;
-
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
+    align-items: center;
+    margin-right: 5px;
 }
+
+.social_icon:last-of-type {
+    margin-right: 0;
+}
+
+
 
 .social_icon:hover
 {
@@ -1259,21 +1237,12 @@ footer
 
 .hotels_items_main
 {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-        flex-direction: column;
+    flex-direction: column;
 
     background-color: #fff;
 
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: space-between;
-    -ms-flex-align: space-between;
     align-items: space-between;
 }
 
@@ -1391,7 +1360,6 @@ footer
 
 .hotels_item .item_name
 {
-    font-family: 'PT Sans';
     font-size: 21px;
     font-weight: 700;
 
@@ -1416,7 +1384,6 @@ footer
 .type,
 .price
 {
-    font-family: 'PT Sans';
     font-size: 14px;
     font-weight: 400;
 
@@ -1427,7 +1394,6 @@ footer
 
 .hotels_item a
 {
-    font-family: 'PT Sans';
     font-size: 14px;
     font-weight: 700;
 
@@ -1494,7 +1460,6 @@ footer
 
 .rating_description
 {
-    font-family: 'PT Sans';
     font-size: 14px;
     font-weight: 400;
 
@@ -1770,14 +1735,13 @@ a.more_button:nth-of-type(1)
 
 .sorting_filter
 {
-    font-family: 'PT Sans';
     font-size: 12px;
     font-weight: 400;
 
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-        flex-direction: row;
+    flex-direction: row;
 
     margin: 0;
     padding: 0;
@@ -1795,7 +1759,7 @@ a.more_button:nth-of-type(1)
     -ms-flex-align: center;
     align-items: center;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .sorting_filter li
