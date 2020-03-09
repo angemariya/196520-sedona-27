@@ -160,7 +160,7 @@ body
     box-sizing: border-box;
     min-height: 216px;
     padding-top: 62px;
-    padding-bottom: 56px;
+    padding-bottom: 58px;
 
     background-color: #fff;
 
@@ -175,8 +175,8 @@ body
     font-weight: 700;
     line-height: 26px;
 
-    width: 440px;
-    margin-bottom: 34px;
+    width: 445px;
+    margin-bottom: 32px;
 
     text-align: center;
     text-transform: uppercase;
@@ -184,23 +184,7 @@ body
     color: #000;
     letter-spacing: 0.1px;
 }
-/*
-.promo_text::before
-{
-    position: absolute;
-    bottom: 215px;
-    left: 50%;
 
-    width: 1200px;
-    height: 59px;
-
-    content: '';
-    transform: translateX(-600px);
-
-    background-image: url(../img/polygon.png);
-    background-position: center;
-}
-*/
 .promo_description
 {
     margin: 0;
@@ -208,7 +192,7 @@ body
     font-size: 14px;
     font-weight: 400;
 
-    width: 492px;
+    width: 500px;
 
     text-align: center;
     text-transform: uppercase;
@@ -1189,8 +1173,6 @@ footer
 .social_icon:last-of-type {
     margin-right: 0;
 }
-
-
 
 .social_icon:hover
 {
