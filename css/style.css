@@ -710,6 +710,14 @@ body
     background-color: #f2f2f2;
 }
 
+.form_group input:hover {
+    background: #ebebeb;
+}
+
+.form_group input:focus {
+    background: #fff;
+}
+
 .group_kids input
 {
     width: 115px;
@@ -796,6 +804,9 @@ body
 
     width: 21px;
     height: 22px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
 
 }
 
@@ -1067,6 +1078,7 @@ input[type='number']
 .form_trigger:active
 {
     background-color: #503e33;
+    color: rgba(255, 255, 255, .3)
 }
 
 
@@ -1259,11 +1271,9 @@ footer
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-        flex-direction: row;
+    flex-direction: row;
 
     width: 1200px;
-    height: 1px;
-    min-height: 150px;
 
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1299,7 +1309,7 @@ footer
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-        flex-direction: column;
+    flex-direction: column;
 
     margin-left: 30px;
 
@@ -1325,20 +1335,22 @@ footer
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-        flex-direction: row;
+    flex-direction: row;
 
     width: 180px;
     margin-bottom: 17px;
 
     -ms-flex-wrap: wrap-reverse;
-        flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
+
 
 .hotels_item .item_name
 {
@@ -1360,7 +1372,6 @@ footer
     opacity: .3;
     color: #000;
 
-    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=30)';
 }
 
 .type,
@@ -1392,16 +1403,11 @@ footer
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-        flex-direction: column;
+    flex-direction: column;
 
     height: 1px;
     min-height: 90px;
 
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
@@ -1411,7 +1417,7 @@ footer
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-        flex-direction: row-reverse;
+    flex-direction: row-reverse;
 
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
@@ -1438,6 +1444,7 @@ footer
     content: '';
 
     background-image: url(../img/icons/star.svg);
+    background-repeat: no-repeat;
 }
 
 .rating_description
@@ -1458,12 +1465,6 @@ footer
     background-color: #f2f2f2;
 }
 
-.hotels_item a:active
-{
-    opacity: .3;
-
-    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=30)';
-}
 
 .hotel_item__buttons
 {
@@ -1471,13 +1472,18 @@ footer
     display: -ms-flexbox;
     display: flex;
 
-    height: 1px;
-    min-height: 27px;
 }
 
-a.more_button:nth-of-type(1)
+.hotels_item a:active
 {
+    color: rgba(255, 255, 255, .3)
+}
+
+.hotel_item__buttons a {
     margin-right: 6px;
+}
+.hotel_item__buttons a:nth-last-child(){
+    margin-right: 0;
 }
 
 .more_button
@@ -1499,6 +1505,7 @@ a.more_button:nth-of-type(1)
 .more_button:active
 {
     background-color: #5496bd;
+    opacity: 1;
 }
 
 .reservation_button
@@ -1528,7 +1535,8 @@ a.more_button:nth-of-type(1)
 .hotels_filters
 {
     min-height: 217px;
-
+    padding-top: 30px;
+    padding-bottom: 35px;
     background-image: url(../img/filter-background.jpg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -1539,19 +1547,11 @@ a.more_button:nth-of-type(1)
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-        flex-direction: row;
+    flex-direction: row;
 
-    height: 1px;
-    min-height: 217px;
 
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
+    
     align-items: center;
 }
 
@@ -1564,8 +1564,6 @@ a.more_button:nth-of-type(1)
 
 .hotels_form fieldset
 {
-    height: 1px;
-    min-height: 160px;
     margin: 0;
     padding: 0;
 
@@ -1641,22 +1639,13 @@ a.more_button:nth-of-type(1)
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-        flex-direction: column;
+    flex-direction: column;
 
-    height: 1px;
-    min-height: 87px;
 
     border-bottom: 1px solid #e5e5e5;
 
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    padding-top: 31px;
+    padding-bottom: 33px;
 }
 
 .search_wrapper
@@ -1664,20 +1653,11 @@ a.more_button:nth-of-type(1)
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-        flex-direction: row;
-
-    width: 1056px;
+    flex-direction: row;
 
     background-color: #fff;
 
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -1727,6 +1707,7 @@ a.more_button:nth-of-type(1)
 
     margin: 0;
     padding: 0;
+    width: 730px;
 
     list-style: none;
 
@@ -1734,13 +1715,6 @@ a.more_button:nth-of-type(1)
 
     color: #000;
 
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 
@@ -1756,7 +1730,6 @@ a.more_button:nth-of-type(1)
 
 .sorting
 {
-    font-family: 'PT Sans';
     font-size: 12px;
     font-weight: 400;
 
@@ -1769,7 +1742,6 @@ a.more_button:nth-of-type(1)
 
 .sorting_filter_item
 {
-    font-family: 'PT Sans';
     font-size: 12px;
     font-size: 12px;
     font-weight: 400;
@@ -1810,6 +1782,8 @@ a.more_button:nth-of-type(1)
 .sorting_filter_item:active
 {
     color: #000;
+    opacity: 1;
+    border-bottom: none;
 }
 
 
