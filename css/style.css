@@ -667,6 +667,7 @@ body
 .main_form
 {
     position: absolute;
+    z-index: 2;
     top: 285px;
     right: 0;
     left: 0;
@@ -801,8 +802,6 @@ body
     visibility: hidden;
 }
 
-
-
 .main_form_error
 {
     -webkit-animation: shake .6s;
@@ -857,43 +856,6 @@ body
     background: #fff;
 }
 
-.group_kids input
-{
-    width: 115px;
-    padding: 0;
-
-    text-align: center;
-}
-
-.group_kids .form_group_label
-{
-    width: 65px;
-}
-
-.group_adult input
-{
-    width: 111px;
-    padding: 0;
-
-    text-align: center;
-}
-
-.group_adult
-{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-
-    width: 50%;
-
-    -webkit-box-align: baseline;
-    -ms-flex-align: baseline;
-    align-items: baseline;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-}
-
 .form_group_label
 {
     font-size: 14px;
@@ -910,6 +872,8 @@ body
 .form_group_input
 {
     position: relative;
+    display: flex;
+
 }
 
 .form_group input::-webkit-input-placeholder
@@ -980,150 +944,148 @@ input[type='number']
 }
 
 
-/* Кнопки + и - в форме*/
-
-.group_adult .plus_button
+.group_kids .form_group_label
 {
-    position: absolute;
-    right: 13px;
-    bottom: 12px;
+    width: 65px;
+}
 
-    width: 12px;
-    height: 12px;
-
-    border: none;
-    background: transparent;
+.group_adult
+{
+    display: flex;
+    align-items: center;
 }
 
 .group_kids
 {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-        flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+}
+.group_adult .plus_button
+{
+    position: relative;
+    width: 38px;
+    height: 38px;
+    background: #f2f2f2;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
 
-    width: 50%;
-
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    -webkit-box-align: baseline;
-    -ms-flex-align: baseline;
-    align-items: baseline;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
+.group_adult .minus_button
+{
+    position: relative;
+    width: 38px;
+    height: 38px;
+    box-sizing: border-box;
+    padding: 0;
+    background-color: #f2f2f2;
+    border: none;
+    cursor: pointer;
 }
 
 .group_kids .plus_button
 {
-    position: absolute;
-    top: 13px;
-    right: 13px;
-
-    width: 12px;
-    height: 12px;
-
+    position: relative;
+    width: 38px;
+    height: 38px;
     border: none;
-    background: transparent;
+    background: #f2f2f2;
+    cursor: pointer;
+    padding: 0;
 }
 
-.plus_icon
+.group_kids .minus_button
+{
+    width: 38px;
+    height: 38px;
+    background: #f2f2f2;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.group_adult .minus_button
 {
     position: relative;
-    right: 6px;
-
-    display: block;
-
-    width: 12px;
-    height: 4px;
-
-    background-color: #a9a9a9;
+    width: 38px;
+    height: 38px;
+    box-sizing: border-box;
+    padding: 0;
+    background-color: #f2f2f2;
+    border: none;
+    cursor: pointer;
 }
 
-.plus_icon::after
+.minus_button::before
 {
     position: absolute;
-    bottom: -4px;
-    left: 4px;
+    top: 18px;
+    left: 12px;
 
-    width: 4px;
-    height: 12px;
+    width: 11px;
+    height: 3px;
 
     content: '';
 
     background-color: #a9a9a9;
 }
 
-.plus_icon:hover
-{
-    background-color: #000;
-}
-
-.plus_icon:hover:after
-{
-    background-color: #000;
-}
-
-.plus_icon:active
-{
-    background-color: #81b3d2;
-}
-
-.plus_icon:active:after
-{
-    background-color: #81b3d2;
-}
-
-.group_adult .minus_button
-{
-    position: absolute;
-    z-index: 1;
-    top: 14px;
+.plus_button::before,
+.plus_button::after 
+{   position: absolute;
+    top: 18px;
     left: 11px;
 
-    width: 12px;
-    height: 12px;
+    width: 11px;
+    height: 3px;
 
-    border: none;
-    background: transparent;
-}
-
-.group_kids .minus_button
-{
-    position: absolute;
-    z-index: 1;
-    top: 13px;
-    left: 13px;
-
-    width: 12px;
-    height: 12px;
-
-    border: none;
-    background: transparent;
-}
-
-.minus_icon
-{
-    position: absolute;
-    top: 4px;
-    right: 0;
-
-    width: 12px;
-    height: 4px;
+    content: '';
 
     background-color: #a9a9a9;
 }
 
-.minus_icon:hover
-{
-    background-color: #000;
+.plus_button::after {
+  transform: rotate(90deg);
 }
 
-.minus_icon:active
+.group_kids .minus_button
 {
-    background-color: #81b3d2;
+    width: 38px;
+    height: 38px;
+    background: #f2f2f2;
+    border: none;
+    cursor: pointer;
+    padding: 0;
 }
+
+input.adult_input {
+    width: 38px;
+    text-align: center;
+    padding: 0;
+}
+
+input.kids_input {
+    width: 38px;
+    text-align: center;
+    padding: 0;
+}
+
+.plus_button:hover::before,
+.plus_button:focus::before,
+.minus_button:hover::before,
+.minus_button:focus::before,
+.plus_button:hover::after,
+.plus_button:focus::after {
+  background-color: #000;
+}
+
+.plus_button:active::before,
+.plus_button:active::after,
+.minus_button:active::before {
+  background-color: #81b3d2;
+}
+
 
 .wrapper_form_groups
 {
@@ -1151,6 +1113,7 @@ input[type='number']
     color: #fff;
     border: none;
     background-color: #81b3d1;
+    cursor: pointer;
 }
 
 .main_form_button:hover
@@ -1200,7 +1163,7 @@ input[type='number']
     font-weight: 700;
 
     position: relative;
-    z-index: 2;
+    z-index: 3;
 
     display: block;
 
@@ -1211,6 +1174,7 @@ input[type='number']
 
     color: #fff;
     background-color: #766357;
+    cursor: pointer;
 }
 
 .form_trigger:hover
@@ -1224,12 +1188,23 @@ input[type='number']
     background-color: #503e33;
 }
 
+.map_section img
+{
+    position: absolute;
+    z-index: 0;
+}
+
+.map_frame {
+    position: relative;
+    z-index: 1;
+}
 
 /*Footer*/
 
 footer
 {
     position: relative;
+    z-index: 1;
 
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1252,12 +1227,16 @@ footer
     display: flex;
 
     width: 400px;
-    padding-top: 32px;
+    padding-top: 34px;
     padding-bottom: 32px;
 
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+}
+
+.footer_transparent .footer_wrapper {
+    padding-top: 32px;
 }
 
 .footer_wrapper:nth-child(1)
@@ -1279,11 +1258,15 @@ footer
     display: flex;
         flex-direction: column;
 
-    padding-left: 123px;
+    padding-left: 129px;
 
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
+}
+
+.footer_transparent .footer_contacts {
+    padding-left: 123px;
 }
 
 
@@ -1409,13 +1392,7 @@ footer
 
 /*Микросетка для section.hotels*/
 
-.hotels_items_wrapper
-{
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
+
 
 .hotels_items_main
 {
@@ -1481,6 +1458,10 @@ footer
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-top: 28px;
+    padding-bottom: 30px;
 }
 
 .hotels_item
@@ -1534,8 +1515,8 @@ footer
     display: flex;
         flex-direction: row;
 
-    width: 180px;
-    margin-bottom: 17px;
+    width: 182px;
+    margin-bottom: 18px;
 
     -ms-flex-wrap: wrap-reverse;
         flex-wrap: wrap-reverse;
@@ -1632,7 +1613,7 @@ footer
 {
     width: 18px;
     height: 18px;
-    margin-left: 5px;
+    margin-left: 6px;
 }
 
 .icon_star:before
@@ -1739,8 +1720,8 @@ footer
 .hotels_filters
 {
     min-height: 217px;
-    padding-top: 30px;
-    padding-bottom: 35px;
+    padding-top: 27px;
+    padding-bottom: 34px;
 
     background-image: url(../img/filter-background.jpg);
     background-repeat: no-repeat;
@@ -1752,7 +1733,7 @@ footer
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-        flex-direction: row;
+    flex-direction: row;
 
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1782,7 +1763,7 @@ footer
 
 .hotels_form fieldset:nth-of-type(1)
 {
-    margin-right: 119px;
+    margin-right: 116px;
 }
 
 .hotels_form fieldset:nth-of-type(2)
@@ -1849,7 +1830,7 @@ footer
     display: flex;
         flex-direction: column;
 
-    padding-top: 31px;
+    padding-top: 30px;
     padding-bottom: 33px;
 
     border-bottom: 1px solid #e5e5e5;
@@ -2082,6 +2063,10 @@ footer
     background-image: url(../img/icons/checkbox-off.svg);
 }
 
+.hotels_form__item label:hover {
+    cursor: pointer;
+}
+
 .hotels_form__item input[type='checkbox']:checked + label::before
 {
     width: 25px;
@@ -2095,9 +2080,12 @@ footer
     outline: 2px dotted #fff;
 }
 
+
+
 .hotels_form__item label:focus::before
 {
     outline: 2px dotted #fff;
+    
 }
 
 .hotels_form__item input[type='checkbox']:disabled + label::before
@@ -2130,9 +2118,9 @@ footer
     font-weight: 600;
     line-height: 21px;
 
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 
-    letter-spacing: .2px;
+    letter-spacing: 0.2px;
     text-transform: uppercase;
 
     color: #fff;
@@ -2142,8 +2130,8 @@ footer
 {
     position: relative;
 
-    height: 36px;
-    margin-bottom: 18px;
+    height: 34px;
+    margin-bottom: 19px;
 
     border: 2px solid #fff;
     border-radius: 2px;
@@ -2182,7 +2170,7 @@ footer
 
 .price_controls .min_price
 {
-    width: 91px;
+    width: 89px;
     padding-left: 65px;
 }
 
@@ -2209,7 +2197,7 @@ footer
 {
     position: relative;
 
-    margin-bottom: 34px;
+    margin-bottom: 33px;
 }
 
 .range_controls .scale
@@ -2267,13 +2255,13 @@ footer
 .filter_range_button
 {
     font-size: 14px;
-    line-height: 20px;
+    line-height: 1;
 
     display: block;
 
     margin: 0 auto;
-    margin-left: 88px;
-    padding: 6px 33px;
+    margin-left: 86px;
+    padding: 9px 33px;
 
     cursor: pointer;
     text-transform: uppercase;

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Седона</title>
-    <link href="css/normalize.min.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css">    
   </head>
@@ -48,17 +48,17 @@
           <div class="white-back">
             <ul class="benefits_list">
               <li>
-                <i class="benefits_icon housing"></i>
+                <i class="benefits_icon housing" aria-hidden="true"></i>
                 <h2 class="benefits_list__header">Жильё</h2>
                 <p class="benefits_list__text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
               </li>
               <li>
-                <i class="benefits_icon food"></i>
+                <i class="benefits_icon food" aria-hidden="true"></i>
                 <h2 class="benefits_list__header">Еда</h2>
                 <p class="benefits_list__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
               </li>
               <li>
-                <i class="benefits_icon souvenire"></i>
+                <i class="benefits_icon souvenire" aria-hidden="true"></i>
                 <h2 class="benefits_list__header">Сувениры</h2>
                 <p class="benefits_list__text">Не только китайского, но и местного производства!</p>
               </li>
@@ -98,12 +98,12 @@
           <p class="booking__description">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
           <a class="form_trigger" href="#">Поиск гостиницы в седоне</a>
 
-          <form class="main_form" method="get" action="URL">
+          <form class="main_form" method="get" action="https://echo.htmlacademy.ru">
             <div class="wrapper_form_groups">
               <div class="form_group">
                 <label class="form_group_label" for="day_in">Дата заезда:</label>
                 <input type="text" id="day_in" name="arrival_date" placeholder="24 апреля 2017">
-                <button class="icon_calender" aria-label="Открыть календарь">
+                <button class="icon_calender" type="button" aria-label="Открыть календарь">
                   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     width="21px" height="22px" viewBox="0 0 21 22" enable-background="new 0 0 21 22" xml:space="preserve">
                     <path fill="#cacaca" d="M19.251,2.025h-2.845V0.648c0-0.381-0.294-0.689-0.656-0.689c-0.363,0-0.656,0.308-0.656,0.689v1.377h-3.938V0.648
@@ -129,7 +129,7 @@
               <div class="form_group">
                 <label class="form_group_label" for="day_out">Дата выезда:</label>
                 <input type="text" id="day_out" name="departure_date" placeholder="4 июля 2017">
-                <button class="icon_calender" aria-label="Открыть календарь">
+                <button class="icon_calender" type="button" aria-label="Открыть календарь">
                   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     width="21px" height="22px" viewBox="0 0 21 22" enable-background="new 0 0 21 22" xml:space="preserve">
                       <path fill="#cacaca" d="M19.251,2.025h-2.845V0.648c0-0.381-0.294-0.689-0.656-0.689c-0.363,0-0.656,0.308-0.656,0.689v1.377h-3.938V0.648 c0-0.381-0.294-0.689-0.655-0.689c-0.363,0-0.657,0.308-0.657,0.689v1.377H5.906V0.648c0-0.381-0.294-0.689-0.656-0.689 c-0.363,0-0.657,0.308-0.657,0.689v1.377H1.75C0.784,2.025,0,2.847,0,3.862v16.302C0,21.179,0.784,22,1.75,22h17.501 C20.217,22,21,21.179,21,20.164V3.862C21,2.847,20.217,2.025,19.251,2.025z M19.688,20.164c0,0.253-0.195,0.459-0.437,0.459H1.75 c-0.241,0-0.438-0.206-0.438-0.459V3.862c0-0.253,0.196-0.459,0.438-0.459h2.844v1.378c0,0.381,0.294,0.689,0.657,0.689 c0.362,0,0.656-0.308,0.656-0.689V3.403h3.938v1.378c0,0.381,0.294,0.689,0.657,0.689c0.361,0,0.655-0.308,0.655-0.689V3.403h3.938 v1.378c0,0.381,0.293,0.689,0.656,0.689c0.362,0,0.656-0.308,0.656-0.689V3.403h2.845c0.241,0,0.437,0.206,0.437,0.459V20.164z"/>
@@ -150,27 +150,28 @@
                 <div class="group_adult">
                   <label class="form_group_label" for="adult">Взрослые:</label>
                   <div class="form_group_input">
-                    <button class="minus_button"><span class="minus_icon"></span></button>
-                    <input type="number" id="adult" name="adult" placeholder="2">
-                    <button class="plus_button"><span class="plus_icon"></span></button>
+                    <button class="minus_button" type="button" aria-label="Минус"></button>
+                    <input class="adult_input" type="number" id="adult" name="adult" placeholder="2">
+                    <button class="plus_button" type="button" aria-label="Плюс"></button>
                   </div>
                 </div>
                 <div class="group_kids">
                   <label class="form_group_label" for="kids">Дети:</label>
                   <div class="form_group_input">
-                    <button class="minus_button"><span class="minus_icon"></span></button>
-                    <input type="number" id="kids" name="kids" placeholder="0">
-                    <button class="plus_button"><span class="plus_icon"></span></button>
+                    <button class="minus_button" type="button" aria-label="Минус"></button>
+                    <input class="kids_input" type="number" id="kids" name="kids" placeholder="0">
+                    <button class="plus_button" type="button" aria-label="Плюс"></button>
                   </div>
                 </div>
               </div>
             </div>
             <button class="main_form_button" type="submit">Найти</button>
           </form>
-
         </section>
+
         <section class="map_section">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d838162.8410384329!2d-111.795138!3d34.854378!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sde!4v1582711478980!5m2!1sru!2sde" width="1200" height="593" style="border:0;" allowfullscreen=""></iframe>
+          <img src="img/map.png" width="1200" height="593" alt="Карта Седоны">
+          <iframe class="map_frame" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d838162.8410384329!2d-111.795138!3d34.854378!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sde!4v1582711478980!5m2!1sru!2sde" width="1200" height="593" style="border:0;" allowfullscreen=""></iframe>
         </section>
       </main>
 
